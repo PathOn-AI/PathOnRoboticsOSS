@@ -8,6 +8,12 @@ serial bus servos. Several structural parts are shared with the
 |---|---|
 | ![Isometric view](media/piper_leader_iso.webp) | ![Side view](media/piper_leader_side.webp) |
 
+## Demo
+
+https://www.loom.com/share/76692481e2974dc4ab211c4a76d80e24
+
+*Teleoperating a Piper arm with the Pathon Robotics 3D-printed Piper leader arm.*
+
 ## Specs
 
 | Spec | Value |
