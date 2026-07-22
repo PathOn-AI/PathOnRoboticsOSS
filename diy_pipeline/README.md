@@ -15,7 +15,7 @@ the agent skills themselves — will be open-sourced soon**, along with demo
 videos of each stage.
 
 One stage is already public: end-effector attachment ships today as
-[`robot-assets-skills/`](../robot-assets-skills/) — a Claude Code skill bundle
+[`robot-assets-skills/`](robot-assets-skills/) — a Claude Code skill bundle
 that attaches any gripper to any arm at the URDF/MJCF layer.
 
 ---
@@ -118,7 +118,7 @@ rather than hidden.
 **Stage 3 — End-effector attachment.** A pure URDF/MJCF → URDF/MJCF
 transformation. Combines MJCF inputs via MuJoCo attachment sites, or source
 URDFs via a fixed mount joint plus optional `tool0`/`tcp` frames. *This is the
-stage that's already open — see [`robot-assets-skills/`](../robot-assets-skills/).*
+stage that's already open — see [`robot-assets-skills/`](robot-assets-skills/).*
 
 **Stage 4 — ROS 2 integration.** Drops the combined description into a ROS 2
 workspace: `ros2_control`, MoveIt 2, teleop. The substrate for IL/RL/VLA work.
@@ -175,7 +175,7 @@ Four principles, and they're the part we'd defend:
 | 2a | CAD / STEP → URDF | Working draft workflow |
 | 2b | URDF/xacro → MJCF | Working wrapper |
 | 2c | MJCF → URDF | Working lossy projection |
-| 3 | End-effector attachment | **Working — released, see [`robot-assets-skills/`](../robot-assets-skills/)** |
+| 3 | End-effector attachment | **Working — released, see [`robot-assets-skills/`](robot-assets-skills/)** |
 | 4 | ROS 2 integration (`ros2_control` + MoveIt 2) | Working preview/gatekeeper |
 | 4b | Dexterous-hand ROS/MoveIt package generation | Not started |
 
