@@ -99,7 +99,7 @@ export default function Home() {
               and calibration.
             </p>
             <a
-              href="https://github.com/PathOn-AI/pathon_opensource/tree/main/iphone_sensor_suite"
+              href="https://github.com/PathOn-AI/pathon_opensource/tree/main/software/iphone_sensor_suite"
               target="_blank"
               rel="noopener noreferrer"
               className="text-green-600 hover:underline text-sm font-medium"
