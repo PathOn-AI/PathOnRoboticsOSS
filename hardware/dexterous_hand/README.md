@@ -30,6 +30,5 @@ Per-version notes are in each version's README.
 
 ## Links
 
-- Step-by-step tutorials: <https://www.pathon.ai/blog>
 - Printable models: <https://makerworld.com/en/@user_2131935394>
 - Questions: [Discord](https://discord.gg/xukJ3nh9wC)
