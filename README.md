@@ -19,6 +19,7 @@ Step-by-step tutorials at https://www.pathon.ai/blog
 | **SO-101 6DoF + Symmetric Gripper** | 6DoF wrist upgrade and symmetric parallel-jaw gripper for the SO-101 arm — hardware files, assembly guide | [hardware/so101_6dof_symmetric_gripper/](hardware/so101_6dof_symmetric_gripper/) |
 | **Piper Leader Arm** | 3D-printable 6-DOF leader arm for teleoperation built around Feetech SCS215 serial bus servos — hardware files, specs, demo | [hardware/piper_leader/](hardware/piper_leader/) |
 | **Dexterous Hand** | Compact servo-actuated dexterous hands for prototyping and manipulation research — V1 (DYNAMIXEL XL330) and V2 (Feetech SCS0009), with CAD, STL, and 3MF files | [hardware/dexterous_hand/](hardware/dexterous_hand/) |
+| └ **Dexterous Hand V3 — Barrett-style** *(placeholder, files not yet released)* | 3-finger underactuated hand: 8 joints from 4 DYNAMIXEL servos — 2-link fingers plus a coupled spread DOF — with MuJoCo + ROS 2 Jazzy + MoveIt 2 integration | [hardware/dexterous_hand/v3/](hardware/dexterous_hand/v3/) |
 | **Livox Mid-360 Mount for Unitree Go2** | 3D-printable cantilever bracket that mounts a Livox Mid-360 LiDAR forward of the Go2's head for unobstructed 360° FOV | [hardware/livox_mid360_go2_mount/](hardware/livox_mid360_go2_mount/) |
 
 ## Software Projects
