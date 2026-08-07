@@ -40,14 +40,14 @@ export function MobileMenu() {
               className="block text-lg font-semibold text-gray-700 hover:text-green-600"
               onClick={() => setMobileMenuOpen(false)}
             >
-              Robots &amp; Parts
+              Hardware
             </Link>
             <Link
-              href="/tools"
+              href="/software"
               className="block text-lg font-semibold text-gray-700 hover:text-green-600"
               onClick={() => setMobileMenuOpen(false)}
             >
-              Tools
+              Software
             </Link>
             {/* Social Icons */}
             <div className="flex items-center gap-5 pt-2">
