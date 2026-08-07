@@ -1,5 +1,7 @@
 ---
 name: "HIWONDER JetAuto Pro"
+kind: "robot"
+maker: "Hiwonder"
 category: "Mobile Manipulator"
 description: "ROS2-enabled autonomous vehicle platform for navigation and perception research."
 link: "https://www.amazon.com/dp/B0C2VZLJCL"

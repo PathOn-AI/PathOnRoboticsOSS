@@ -1,5 +1,7 @@
 ---
 name: "LeKiwi"
+kind: "robot"
+maker: "SIGRobotics-UIUC"
 category: "Mobile Manipulator"
 description: "Low-cost holonomic drive robot with manipulation capabilities for embodied AI experiments."
 link: "https://github.com/SIGRobotics-UIUC/LeKiwi"

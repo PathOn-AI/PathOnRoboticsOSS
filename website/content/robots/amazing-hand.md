@@ -1,5 +1,7 @@
 ---
 name: "Amazing Hand"
+kind: "robot"
+maker: "Pollen Robotics"
 category: "Dexterous Hand"
 description: "Self-contained, 3D-printed robotic hand with 8 DOF costing under €200, covered with TPU shell. Four fingers with two motors each."
 link: "https://github.com/pollen-robotics/AmazingHand"

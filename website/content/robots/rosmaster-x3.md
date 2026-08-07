@@ -1,5 +1,7 @@
 ---
 name: "ROSMASTER X3 ROS2 Robot"
+kind: "robot"
+maker: "Yahboom"
 category: "Mobile Base"
 description: "Mecanum wheel robot enabling omnidirectional movement for ROS2 development."
 link: "https://www.robotshop.com/products/yahboom-rosmaster-x3-ros2-robot-with-mecanum-wheel-advanced-without-orin-super-board?variant=51961379619180"

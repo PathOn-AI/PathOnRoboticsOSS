@@ -1,5 +1,7 @@
 ---
 name: "Hiwonder MentorPi"
+kind: "robot"
+maker: "Hiwonder"
 category: "Mobile Base"
 description: "ROS2 robot powered by Raspberry Pi 5 with 3D depth camera, TOF LiDAR, and SLAM navigation. Three chassis variants available."
 link: "https://www.hiwonder.com/products/mentorpi-m1"

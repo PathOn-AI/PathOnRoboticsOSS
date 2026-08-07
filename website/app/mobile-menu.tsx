@@ -40,7 +40,7 @@ export function MobileMenu() {
               className="block text-lg font-semibold text-gray-700 hover:text-green-600"
               onClick={() => setMobileMenuOpen(false)}
             >
-              Robots
+              Robots &amp; Parts
             </Link>
             <Link
               href="/tools"

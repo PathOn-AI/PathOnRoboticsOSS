@@ -58,7 +58,7 @@ export default function RootLayout({
                   Home
                 </Link>
                 <Link href="/robots" className="text-lg font-semibold text-gray-700 hover:text-green-600 transition-colors">
-                  Robots
+                  Robots &amp; Parts
                 </Link>
                 <Link href="/tools" className="text-lg font-semibold text-gray-700 hover:text-green-600 transition-colors">
                   Tools

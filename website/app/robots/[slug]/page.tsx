@@ -1,6 +1,12 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { getAllSlugs, getRobotBySlug, getSpecLabel } from "@/lib/robots";
+import {
+  getAllSlugs,
+  getRobotBySlug,
+  getSpecLabel,
+  isPathon,
+  KIND_LABELS,
+} from "@/lib/robots";
 
 export function generateStaticParams() {
   return getAllSlugs().map((slug) => ({ slug }));
@@ -50,6 +56,18 @@ export default async function RobotPage({
         <span className="text-sm text-gray-400 uppercase tracking-wide">
           {robot.category}
         </span>
+        <span className="text-xs font-medium px-2 py-1 bg-gray-100 text-gray-600 rounded-full">
+          {KIND_LABELS[robot.kind]}
+        </span>
+        {isPathon(robot) ? (
+          <span className="text-xs font-semibold px-2 py-1 bg-green-600 text-white rounded-full">
+            Built by Pathon Robotics
+          </span>
+        ) : (
+          robot.maker && (
+            <span className="text-sm text-gray-400">by {robot.maker}</span>
+          )
+        )}
       </div>
 
       {/* Hero: image + description */}

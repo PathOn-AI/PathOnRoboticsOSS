@@ -1,5 +1,7 @@
 ---
 name: "Elephant Robotics myCobot 280 Pi"
+kind: "robot"
+maker: "Elephant Robotics"
 category: "Robotic Arm"
 description: "6-DOF collaborative robot powered by Raspberry Pi 4B. Supports Python, C++, ROS, and Arduino with AI kit and adaptive gripper."
 link: "https://shop.elephantrobotics.com/collections/mycobot-280/products/holiday-mycobot-pi-raspberry-pi-powered-6-dof-collaborative-robot"

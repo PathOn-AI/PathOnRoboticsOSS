@@ -1,5 +1,7 @@
 ---
 name: "SO-ARM101"
+kind: "robot"
+maker: "TheRobotStudio"
 category: "Robotic Arm"
 description: "Standard Open Arm 101 — enhanced version with improved capabilities for robotic manipulation research."
 link: "https://github.com/TheRobotStudio/SO-ARM100"
