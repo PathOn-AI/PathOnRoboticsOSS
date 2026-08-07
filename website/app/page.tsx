@@ -1,5 +1,7 @@
 import Link from "next/link";
 import { getAllRobots, getCategories, isPathon, KIND_LABELS } from "@/lib/robots";
+import { TOOLS } from "./software/tools-data";
+import { PROJECTS } from "./software/projects-data";
 
 export default function Home() {
   const entries = getAllRobots();
@@ -181,25 +183,65 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Tools */}
+      {/* Software — browser tools up front, repos under them */}
       <section className="py-16 px-6 border-t border-gray-200">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-2xl font-bold mb-8 text-center">Our Tools</h2>
-          <div className="border border-gray-200 rounded-lg p-6 hover:border-green-300 transition-colors">
-            <h3 className="text-lg font-semibold mb-2">iPhone Sensor Suite</h3>
-            <p className="text-gray-600 mb-4">
-              Use iPhone as a full sensor suite (LiDAR, RGB, IMU) for robot
-              manipulation and navigation — includes Python SDK, ROS2 driver,
-              and calibration.
-            </p>
-            <a
-              href="https://github.com/PathOn-AI/pathon_opensource/tree/main/software/iphone_sensor_suite"
-              target="_blank"
-              rel="noopener noreferrer"
+          <h2 className="text-2xl font-bold mb-2 text-center">Software</h2>
+          <p className="text-gray-600 text-center mb-8">
+            Tools that run in your browser, and the open-source code behind our
+            robots.
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {TOOLS.map((tool) => (
+              <Link
+                key={tool.href}
+                href={tool.href}
+                className="group block p-6 border border-gray-200 rounded-lg hover:border-green-300 hover:bg-green-50 transition-colors"
+              >
+                <div className="flex items-start gap-4">
+                  <div className="p-2 bg-green-100 rounded-lg shrink-0">
+                    {tool.icon}
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold mb-1 group-hover:text-green-600 transition-colors">
+                      {tool.name}
+                    </h3>
+                    <p className="text-sm text-gray-600 line-clamp-3">
+                      {tool.description}
+                    </p>
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
+
+          <div className="grid grid-cols-1 gap-4 mt-4">
+            {PROJECTS.map((project) => (
+              <a
+                key={project.href}
+                href={project.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex items-baseline gap-3 p-4 border border-gray-200 rounded-lg hover:border-green-300 hover:bg-green-50 transition-colors"
+              >
+                <h3 className="font-semibold shrink-0 group-hover:text-green-600 transition-colors">
+                  {project.name}
+                </h3>
+                <p className="text-sm text-gray-600 line-clamp-1">
+                  {project.description}
+                </p>
+              </a>
+            ))}
+          </div>
+
+          <div className="text-center mt-8">
+            <Link
+              href="/software"
               className="text-green-600 hover:underline text-sm font-medium"
             >
-              View documentation
-            </a>
+              All software &rarr;
+            </Link>
           </div>
         </div>
       </section>

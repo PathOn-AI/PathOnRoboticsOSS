@@ -58,10 +58,10 @@ export default function RootLayout({
                   Home
                 </Link>
                 <Link href="/robots" className="text-lg font-semibold text-gray-700 hover:text-green-600 transition-colors">
-                  Robots &amp; Parts
+                  Hardware
                 </Link>
-                <Link href="/tools" className="text-lg font-semibold text-gray-700 hover:text-green-600 transition-colors">
-                  Tools
+                <Link href="/software" className="text-lg font-semibold text-gray-700 hover:text-green-600 transition-colors">
+                  Software
                 </Link>
               </nav>
               <div className="flex items-center gap-4">
