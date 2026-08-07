@@ -16,6 +16,9 @@ specs:
 purpose:
   - "Research"
   - "Education"
+media:
+  - title: "MoveIt motion planning with point cloud (real robot)"
+    url: "https://www.loom.com/share/303cc35079a64f459af959ff9830bfd2"
 components:
   - name: "link_pitch"
     type: "Wrist Pitch Link"

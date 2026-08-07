@@ -31,6 +31,7 @@ export function getAllRobots(): Robot[] {
         specs: data.specs || {},
         components: data.components || [],
         purpose: data.purpose || [],
+        media: data.media || [],
       };
     });
 

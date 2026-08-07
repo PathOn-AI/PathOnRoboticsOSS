@@ -14,6 +14,9 @@ specs:
 purpose:
   - "Research"
   - "Education"
+media:
+  - title: "PathOn Robotics Open Source: Dex-3 hand"
+    url: "https://www.loom.com/share/2af562428e9e4f7997235696ade344c9"
 components:
   - name: "Feetech SCS0009 Micro Servos"
     type: "Actuators"

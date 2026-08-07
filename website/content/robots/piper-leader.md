@@ -17,6 +17,9 @@ specs:
 purpose:
   - "Teleoperation"
   - "Research"
+media:
+  - title: "Teleoperating a Piper arm with the printed leader"
+    url: "https://www.loom.com/share/76692481e2974dc4ab211c4a76d80e24"
 components:
   - name: "Feetech SCS215 Serial Bus Servos"
     type: "Actuators (x6)"

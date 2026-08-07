@@ -14,6 +14,11 @@ specs:
   status: "Released — STL"
 purpose:
   - "Research"
+media:
+  - title: "Post by @RexDQZhang"
+    url: "https://x.com/RexDQZhang/status/2052173490414113196"
+  - title: "PathOn Robotics: Unitree Go2 Navigation"
+    url: "https://www.loom.com/share/0165c6a3c50d40ba8e25a56c2344a5cd"
 components:
   - name: "Cantilever Bracket"
     type: "Printed Part"

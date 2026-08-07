@@ -18,6 +18,9 @@ specs:
 purpose:
   - "Research"
   - "Hobby"
+media:
+  - title: "PathOn Robotics Open Source: LeKiwi"
+    url: "https://www.loom.com/share/ddbfc90e92b54a35824a8174be5a5f9d"
 components:
   - name: "STS3215 Servos"
     type: "Bus Servos (x9)"

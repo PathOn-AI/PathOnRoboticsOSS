@@ -17,6 +17,13 @@ specs:
 purpose:
   - "Research"
   - "Education"
+media:
+  - title: "mod101 — a configurable SO-101 with a web configurator and ROS 2 packages"
+    url: "https://www.linkedin.com/posts/cristian-paul-dragomir-70095b11b_robot-arms-are-cool-but-no-two-people-want-ugcPost-7491175299758485505-avuB/"
+  - title: "Vision-language grasping (real robot)"
+    url: "https://www.loom.com/share/fe4379299d904ffc811d0ab0f7dc357c"
+  - title: "Vision-language grasping (simulation)"
+    url: "https://www.loom.com/share/2fed8ad63ee7416fad60bd227efd1a95"
 components:
   - name: "frame + cam"
     type: "Gripper Body"
