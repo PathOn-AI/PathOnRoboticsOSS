@@ -16,6 +16,9 @@ specs:
   status: "Released — CAD, STL, 3MF"
 purpose:
   - "Research"
+media:
+  - title: "Pathon Dexterous Hand V1 demo"
+    url: "https://www.loom.com/share/230f5db9a7ae4e8f90ad7e18fb1e4fa1"
 components:
   - name: "DYNAMIXEL XL330-M288-T"
     type: "Actuators (x7)"

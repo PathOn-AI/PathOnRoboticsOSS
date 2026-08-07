@@ -1,11 +1,15 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import {
+  embedFrameClass,
+  embedUrl,
   getAllSlugs,
   getRobotBySlug,
   getSpecLabel,
   isPathon,
   KIND_LABELS,
+  mediaPlatform,
+  PLATFORM_LABELS,
 } from "@/lib/robots";
 
 export function generateStaticParams() {
@@ -145,6 +149,63 @@ export default async function RobotPage({
                 </div>
               ))}
             </div>
+          </div>
+        </section>
+      )}
+
+      {/* Videos & posts */}
+      {robot.media.length > 0 && (
+        <section className="mb-16 pb-16 border-b border-gray-200">
+          <h2 className="text-xs font-medium uppercase tracking-[0.2em] text-gray-400 mb-6">
+            Videos &amp; Posts
+          </h2>
+          {/* Scrolls sideways, so the list takes the same room however long it gets */}
+          <div className="flex gap-6 overflow-x-auto snap-x snap-mandatory pb-4 -mx-6 px-6">
+            {robot.media.map((item) => {
+              const platform = mediaPlatform(item.url);
+              const embed = embedUrl(item.url);
+              return (
+                <div
+                  key={item.url}
+                  className="snap-start shrink-0 w-[85%] sm:w-[26rem]"
+                >
+                  {/* Caption first, so cards of differing heights still line up */}
+                  <a
+                    href={item.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group block mb-3"
+                  >
+                    <span className="text-xs uppercase tracking-wide text-gray-400">
+                      {PLATFORM_LABELS[platform]}
+                    </span>
+                    <span className="block font-medium group-hover:text-green-600 transition-colors">
+                      {item.title}{" "}
+                      <span className="text-gray-400 font-normal">&rarr;</span>
+                    </span>
+                  </a>
+                  {embed ? (
+                    <div
+                      className={`${embedFrameClass(platform)} rounded-lg overflow-hidden bg-gray-100 border border-gray-200`}
+                    >
+                      <iframe
+                        src={embed}
+                        title={item.title}
+                        loading="lazy"
+                        allowFullScreen
+                        className="w-full h-full border-0"
+                      />
+                    </div>
+                  ) : (
+                    <div className="aspect-video rounded-lg border border-gray-200 bg-gray-50 flex items-center justify-center">
+                      <span className="text-sm font-medium text-gray-400">
+                        View on {PLATFORM_LABELS[platform]} &rarr;
+                      </span>
+                    </div>
+                  )}
+                </div>
+              );
+            })}
           </div>
         </section>
       )}

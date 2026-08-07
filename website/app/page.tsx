@@ -6,7 +6,6 @@ import { PROJECTS } from "./software/projects-data";
 export default function Home() {
   const entries = getAllRobots();
   const robots = entries.filter((r) => r.kind === "robot");
-  const parts = entries.filter((r) => r.kind === "part");
   const ours = entries.filter(isPathon);
 
   return (
@@ -91,6 +90,9 @@ export default function Home() {
                     alt={item.name}
                     className="absolute inset-0 w-full h-full object-cover"
                   />
+                  <span className="absolute top-2 left-2 text-xs font-semibold px-2 py-1 bg-green-600 text-white rounded-full">
+                    Pathon Robotics
+                  </span>
                   <span className="absolute top-2 right-2 text-xs font-medium px-2 py-1 bg-white/90 text-gray-700 rounded-full">
                     {KIND_LABELS[item.kind]}
                   </span>
@@ -132,53 +134,6 @@ export default function Home() {
                 </Link>
               );
             })}
-          </div>
-        </div>
-      </section>
-
-      {/* Mounts & adapters — few enough to list outright */}
-      <section className="py-16 px-6 border-t border-gray-200">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-2xl font-bold mb-2 text-center">
-            Mounts &amp; Adapters
-          </h2>
-          <p className="text-gray-600 text-center mb-8">
-            Passive 3D-printed hardware that bolts onto a robot — sensor
-            brackets, arm-to-tool adapters.
-          </p>
-          <div
-            className={
-              parts.length === 1
-                ? "max-w-xl mx-auto"
-                : "grid grid-cols-1 sm:grid-cols-2 gap-6"
-            }
-          >
-            {parts.map((part) => (
-              <Link
-                key={part.slug}
-                href={`/robots/${part.slug}`}
-                className="group flex gap-4 items-center p-4 border border-gray-200 rounded-lg hover:border-green-300 hover:shadow-md transition-all"
-              >
-                <img
-                  src={part.image}
-                  alt={part.name}
-                  className="w-24 h-24 shrink-0 rounded-lg object-cover bg-gray-100"
-                />
-                <div className="min-w-0">
-                  <div className="flex items-center gap-2 mb-1">
-                    <span className="text-xs px-2 py-0.5 bg-gray-100 rounded-full text-gray-600">
-                      {part.category}
-                    </span>
-                  </div>
-                  <h3 className="font-semibold group-hover:text-green-600 transition-colors">
-                    {part.name}
-                  </h3>
-                  <p className="text-sm text-gray-600 line-clamp-2 mt-1">
-                    {part.description}
-                  </p>
-                </div>
-              </Link>
-            ))}
           </div>
         </div>
       </section>
