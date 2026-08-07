@@ -1,9 +1,11 @@
 import Link from "next/link";
-import { getAllRobots, getCategories } from "@/lib/robots";
+import { getAllRobots, getCategories, isPathon, KIND_LABELS } from "@/lib/robots";
 
 export default function Home() {
-  const robots = getAllRobots();
-  const categories = getCategories(robots);
+  const entries = getAllRobots();
+  const robots = entries.filter((r) => r.kind === "robot");
+  const parts = entries.filter((r) => r.kind === "part");
+  const ours = entries.filter(isPathon);
 
   return (
     <div>
@@ -14,8 +16,9 @@ export default function Home() {
             Open Source Robotics Lab
           </h1>
           <p className="text-base md:text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-            A curated collection of open-source tools and resources for building
-            and controlling low-cost robots — by{" "}
+            Open hardware we design — robots, dexterous hands, grippers, and
+            sensor mounts — plus a curated map of the low-cost platforms we build
+            on. By{" "}
             <a
               href="https://www.pathon.ai"
               className="text-green-600 hover:underline"
@@ -29,7 +32,7 @@ export default function Home() {
               href="/robots"
               className="inline-flex items-center px-6 py-3 bg-green-600 text-white rounded-lg font-medium hover:bg-green-700 transition-colors"
             >
-              Explore Robots
+              Explore Robots &amp; Parts
             </Link>
             <a
               href="https://github.com/PathOn-AI/pathon_opensource"
@@ -51,7 +54,9 @@ export default function Home() {
             <div className="text-sm text-gray-500 mt-1">Robots</div>
           </div>
           <div>
-            <div className="text-3xl font-bold text-green-600">{categories.length}</div>
+            <div className="text-3xl font-bold text-green-600">
+              {getCategories(robots).length}
+            </div>
             <div className="text-sm text-gray-500 mt-1">Categories</div>
           </div>
           <div>
@@ -61,19 +66,61 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Categories preview */}
+      {/* Our hardware */}
       <section className="py-16 px-6">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-2xl font-bold mb-8 text-center">
-            Robot Categories
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-2xl font-bold mb-2 text-center">
+            Built by Pathon Robotics
           </h2>
+          <p className="text-gray-600 text-center mb-8">
+            Our own open hardware — CAD, printable STLs, and assembly guides in
+            the repo.
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {ours.map((item) => (
+              <Link
+                key={item.slug}
+                href={`/robots/${item.slug}`}
+                className="group block border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-shadow"
+              >
+                <div className="aspect-video bg-gray-100 relative overflow-hidden">
+                  <img
+                    src={item.image}
+                    alt={item.name}
+                    className="absolute inset-0 w-full h-full object-cover"
+                  />
+                  <span className="absolute top-2 right-2 text-xs font-medium px-2 py-1 bg-white/90 text-gray-700 rounded-full">
+                    {KIND_LABELS[item.kind]}
+                  </span>
+                </div>
+                <div className="p-4">
+                  <h3 className="font-semibold mb-2 group-hover:text-green-600 transition-colors">
+                    {item.name}
+                  </h3>
+                  <p className="text-sm text-gray-600 line-clamp-2">
+                    {item.description}
+                  </p>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Robots by category */}
+      <section className="py-16 px-6 border-t border-gray-200">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-2xl font-bold mb-2 text-center">Robots</h2>
+          <p className="text-gray-600 text-center mb-8">
+            Actuated machines you can drive on their own.
+          </p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {categories.map((cat) => {
+            {getCategories(robots).map((cat) => {
               const count = robots.filter((r) => r.category === cat).length;
               return (
                 <Link
                   key={cat}
-                  href={`/robots?category=${encodeURIComponent(cat)}`}
+                  href={`/robots?kind=robot&category=${encodeURIComponent(cat)}`}
                   className="block p-4 border border-gray-200 rounded-lg hover:border-green-300 hover:bg-green-50 transition-colors text-center"
                 >
                   <div className="font-semibold">{cat}</div>
@@ -83,6 +130,53 @@ export default function Home() {
                 </Link>
               );
             })}
+          </div>
+        </div>
+      </section>
+
+      {/* Mounts & adapters — few enough to list outright */}
+      <section className="py-16 px-6 border-t border-gray-200">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-2xl font-bold mb-2 text-center">
+            Mounts &amp; Adapters
+          </h2>
+          <p className="text-gray-600 text-center mb-8">
+            Passive 3D-printed hardware that bolts onto a robot — sensor
+            brackets, arm-to-tool adapters.
+          </p>
+          <div
+            className={
+              parts.length === 1
+                ? "max-w-xl mx-auto"
+                : "grid grid-cols-1 sm:grid-cols-2 gap-6"
+            }
+          >
+            {parts.map((part) => (
+              <Link
+                key={part.slug}
+                href={`/robots/${part.slug}`}
+                className="group flex gap-4 items-center p-4 border border-gray-200 rounded-lg hover:border-green-300 hover:shadow-md transition-all"
+              >
+                <img
+                  src={part.image}
+                  alt={part.name}
+                  className="w-24 h-24 shrink-0 rounded-lg object-cover bg-gray-100"
+                />
+                <div className="min-w-0">
+                  <div className="flex items-center gap-2 mb-1">
+                    <span className="text-xs px-2 py-0.5 bg-gray-100 rounded-full text-gray-600">
+                      {part.category}
+                    </span>
+                  </div>
+                  <h3 className="font-semibold group-hover:text-green-600 transition-colors">
+                    {part.name}
+                  </h3>
+                  <p className="text-sm text-gray-600 line-clamp-2 mt-1">
+                    {part.description}
+                  </p>
+                </div>
+              </Link>
+            ))}
           </div>
         </div>
       </section>

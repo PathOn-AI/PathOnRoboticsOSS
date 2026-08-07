@@ -1,5 +1,7 @@
 ---
 name: "Hiwonder PuppyPi"
+kind: "robot"
+maker: "Hiwonder"
 category: "Quadruped"
 description: "ROS quadruped robot powered by Raspberry Pi 5 with AI vision, 8 coreless servos, OpenCV, and SLAM mapping."
 link: "https://www.hiwonder.com/products/puppypi"

@@ -1,5 +1,7 @@
 ---
 name: "AgileX PiPER"
+kind: "robot"
+maker: "AgileX"
 category: "Robotic Arm"
 description: "Lightweight 6-DOF arm weighing ~4 kg with 1.5 kg payload and ±0.1 mm repeatability. Native ROS/ROS2 support and Python API."
 link: "https://global.agilex.ai/products/piper"

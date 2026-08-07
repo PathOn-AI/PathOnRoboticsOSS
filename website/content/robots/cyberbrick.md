@@ -1,5 +1,7 @@
 ---
 name: "CyberBrick by Bambu Lab"
+kind: "robot"
+maker: "Bambu Lab"
 category: "DIY Kits"
 description: "Modular hardware kit enabling 3D printing designers to build functional robots — arms, combat robots, vehicles, and droids."
 link: "https://makerworld.com/en/cyberbrick"

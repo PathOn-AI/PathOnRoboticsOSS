@@ -1,24 +1,9 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
+import { isPathon, type Robot, type RobotKind } from "./robot-types";
 
-export interface Component {
-  name: string;
-  type: string;
-}
-
-export interface Robot {
-  slug: string;
-  name: string;
-  category: string;
-  description: string;
-  link: string;
-  image: string;
-  content: string;
-  specs: Record<string, string>;
-  components: Component[];
-  purpose: string[];
-}
+export * from "./robot-types";
 
 export const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH || "/opensource";
 
@@ -36,6 +21,8 @@ export function getAllRobots(): Robot[] {
       return {
         slug,
         name: data.name,
+        kind: (data.kind as RobotKind) || "robot",
+        maker: data.maker || "",
         category: data.category,
         description: data.description,
         link: data.link,
@@ -47,7 +34,11 @@ export function getAllRobots(): Robot[] {
       };
     });
 
-  return robots;
+  // Our own hardware first, then everything else alphabetically.
+  return robots.sort((a, b) => {
+    if (isPathon(a) !== isPathon(b)) return isPathon(a) ? -1 : 1;
+    return a.name.localeCompare(b.name);
+  });
 }
 
 export function getRobotBySlug(slug: string): Robot | undefined {
@@ -77,6 +68,17 @@ const SPEC_LABELS: Record<string, string> = {
   power: "Power",
   repeatability: "Repeatability",
   status: "Status",
+  fingers: "Fingers",
+  servos: "Servos",
+  torque: "Stall torque",
+  resolution: "Resolution",
+  feedback: "Feedback",
+  gripper: "Gripper",
+  fits: "Fits",
+  formats: "File formats",
+  material: "Material",
+  hardware: "Fasteners",
+  printbed: "Print bed",
 };
 
 export function getSpecLabel(key: string): string {

@@ -1,5 +1,7 @@
 ---
 name: "Clearpath Robotics TurtleBot 4"
+kind: "robot"
+maker: "Clearpath Robotics"
 category: "Mobile Base"
 description: "Industry-standard mobile robot for ROS2 development and education."
 link: "https://www.robotshop.com/products/clearpath-robotics-turtlebot-4-mobile-robot?variant=42360573362337"
