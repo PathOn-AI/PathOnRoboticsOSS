@@ -21,6 +21,15 @@ Accounting: 3 fingers × 2 joints = 6 finger joints, + 2 spread joints (both on 
 
 Reference: Townsend, *"The BarrettHand grasper — programmably flexible part handling and assembly,"* Industrial Robot, 2000 · <https://barrett.com/barretthand>
 
+## CAD Walkthrough
+
+[`media/cad_walkthrough.mp4`](media/cad_walkthrough.mp4) — a 13-second screen capture of the
+`dex_hand` SolidWorks assembly, dragging a finger through its flexion range to show the
+proximal + distal link geometry and the spread gear ring in the palm.
+
+> This is a **CAD capture, not a hardware demo** — no physical hand is assembled yet. A demo of a
+> built hand is still on the roadmap.
+
 ## Target Specs
 
 | Spec | Target |
@@ -66,7 +75,8 @@ dexterous_hand/v3/
 |   |-- distal.STL                           # distal link
 |   `-- Part16_straight^dex_hand.STL         # finger base / straight link
 |-- 3mf/                                     # Bambu Studio print project  (TBD)
-`-- media/                                   # renders, photos, demo stills  (TBD)
+`-- media/
+    `-- cad_walkthrough.mp4                  # 13 s SolidWorks assembly walkthrough
 ```
 
 ### Two notes on the file names
