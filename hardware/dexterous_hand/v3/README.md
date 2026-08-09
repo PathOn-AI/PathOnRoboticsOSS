@@ -10,6 +10,12 @@ A 3-finger, **Barrett-style** dexterous hand: high grasp versatility from very f
 
 The hand itself is arm-agnostic — the only arm-specific part is the printed wrist adapter. Our reference integration is the AgileX Piper 6-DOF arm; swapping the adapter is what it takes to put it on something else.
 
+![V3 hand assembly, isometric view](media/hand_iso.webp)
+
+*CAD render of the `dex_hand` assembly — three fingers in the open position, the spread gear ring
+around the palm, and the spread servo below the mounting plate. The transparent block underneath is
+`base_base`, the stock blank, shown for context only. **Render, not a photo** — no hand is built yet.*
+
 ## Why Barrett-style
 
 V1 and V2 give one actuator per joint — simple, but the motor count grows with every joint you add and the palm fills up fast. The Barrett Hand (BH8-280/282) is the canonical answer: **8 joints driven by 4 actuators**, where the gap between the two is closed mechanically rather than electrically. V3 takes that topology:
@@ -76,6 +82,7 @@ dexterous_hand/v3/
 |   `-- Part16_straight^dex_hand.STL         # finger base / straight link
 |-- 3mf/                                     # Bambu Studio print project  (TBD)
 `-- media/
+    |-- hand_iso.webp                        # isometric CAD render of the assembly
     `-- cad_walkthrough.mp4                  # 13 s SolidWorks assembly walkthrough
 ```
 
