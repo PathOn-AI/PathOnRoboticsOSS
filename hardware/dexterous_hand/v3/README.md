@@ -1,5 +1,8 @@
 # PathOn Dexterous Hand V3 — Barrett-Style
 
+> **This is the hand we are actively developing.** V3 is PathOn Robotics' current in-house
+> dexterous hand — [V1](../v1/) is the complete package to build today, but new work goes here.
+>
 > **Status: partial release.** The CAD assembly and the first printable meshes are now in this
 > folder. Still to come: the pre-arranged 3MF print plate, renders/photos, the URDF/MJCF
 > simulation models, and the printed wrist adapter. Everything in the *Target Specs* table below
