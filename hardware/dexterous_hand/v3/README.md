@@ -32,10 +32,11 @@ Reference: Townsend, *"The BarrettHand grasper — programmably flexible part ha
 
 ## CAD Walkthrough
 
-https://www.loom.com/share/a6dab9213ed04e7084dc8da638d73888
+[![CAD walkthrough of the dex_hand SolidWorks assembly](https://cdn.loom.com/sessions/thumbnails/a6dab9213ed04e7084dc8da638d73888-2be32a0337564115.gif)](https://www.loom.com/share/a6dab9213ed04e7084dc8da638d73888)
 
 *A 13-second screen capture of the `dex_hand` SolidWorks assembly, dragging a finger through its
-flexion range to show the proximal + distal link geometry and the spread gear ring in the palm.*
+flexion range to show the proximal + distal link geometry and the spread gear ring in the palm.
+Click the preview to play it on Loom.*
 
 > This is a **CAD capture, not a hardware demo** — no physical hand is assembled yet. A demo of a
 > built hand is still on the roadmap.
