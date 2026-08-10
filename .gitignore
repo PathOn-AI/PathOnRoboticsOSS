@@ -7,3 +7,8 @@ __pycache__
 venv
 .ipynb_checkpoints
 
+# Video stays off git — host it on Loom and link from the README.
+*.mp4
+*.mov
+*.webm
+

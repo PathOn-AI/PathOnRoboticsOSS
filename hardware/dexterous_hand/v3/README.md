@@ -32,9 +32,10 @@ Reference: Townsend, *"The BarrettHand grasper — programmably flexible part ha
 
 ## CAD Walkthrough
 
-[`media/cad_walkthrough.mp4`](media/cad_walkthrough.mp4) — a 13-second screen capture of the
-`dex_hand` SolidWorks assembly, dragging a finger through its flexion range to show the
-proximal + distal link geometry and the spread gear ring in the palm.
+https://www.loom.com/share/a6dab9213ed04e7084dc8da638d73888
+
+*A 13-second screen capture of the `dex_hand` SolidWorks assembly, dragging a finger through its
+flexion range to show the proximal + distal link geometry and the spread gear ring in the palm.*
 
 > This is a **CAD capture, not a hardware demo** — no physical hand is assembled yet. A demo of a
 > built hand is still on the roadmap.
@@ -85,8 +86,7 @@ dexterous_hand/v3/
 |   `-- Part16_straight^dex_hand.STL         # finger base / straight link
 |-- 3mf/                                     # Bambu Studio print project  (TBD)
 `-- media/
-    |-- hand_iso.webp                        # isometric CAD render of the assembly
-    `-- cad_walkthrough.mp4                  # 13 s SolidWorks assembly walkthrough
+    `-- hand_iso.webp                        # isometric CAD render of the assembly
 ```
 
 ### Two notes on the file names
