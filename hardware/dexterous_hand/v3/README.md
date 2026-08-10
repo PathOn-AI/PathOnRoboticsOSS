@@ -1,4 +1,4 @@
-# Pathon Dexterous Hand V3 — Barrett-Style
+# PathOn Dexterous Hand V3 — Barrett-Style
 
 > **Status: partial release.** The CAD assembly and the first printable meshes are now in this
 > folder. Still to come: the pre-arranged 3MF print plate, renders/photos, the URDF/MJCF
@@ -6,7 +6,7 @@
 > is still a **design target**, not an as-built measurement — see
 > [What is measured](#what-is-measured).
 
-A 3-finger, **Barrett-style** dexterous hand: high grasp versatility from very few actuators, built around **DYNAMIXEL X-series** servos. This is **V3** of the Pathon Dexterous Hand, following [V1](../v1/) (DYNAMIXEL XL330) and [V2](../v2/) (Feetech SCS0009).
+A 3-finger, **Barrett-style** dexterous hand: high grasp versatility from very few actuators, built around **DYNAMIXEL X-series** servos. This is **V3** of the PathOn Dexterous Hand, following [V1](../v1/) (DYNAMIXEL XL330) and [V2](../v2/) (Feetech SCS0009).
 
 The hand itself is arm-agnostic — the only arm-specific part is the printed wrist adapter. Our reference integration is the AgileX Piper 6-DOF arm; swapping the adapter is what it takes to put it on something else.
 

@@ -3,7 +3,7 @@ import { TOOLS } from "./tools-data";
 import { PROJECTS } from "./projects-data";
 
 export const metadata = {
-  title: "Software — Pathon Robotics Open Source",
+  title: "Software — PathOn Robotics Open Source",
   description:
     "Browser tools for robotics data visualization, and open-source code for building and controlling robots.",
 };
@@ -56,12 +56,12 @@ export default function SoftwarePage() {
         <p className="text-gray-600 mb-6">
           Code you clone — each is a folder in the{" "}
           <a
-            href="https://github.com/PathOn-AI/pathon_opensource"
+            href="https://github.com/PathOn-AI/PathOnRoboticsOSS"
             target="_blank"
             rel="noopener noreferrer"
             className="text-green-600 hover:underline"
           >
-            pathon_opensource
+            PathOnRoboticsOSS
           </a>{" "}
           repo, with docs and setup instructions alongside the code.
         </p>

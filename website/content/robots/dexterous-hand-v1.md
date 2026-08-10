@@ -1,10 +1,10 @@
 ---
-name: "Pathon Dexterous Hand V1"
+name: "PathOn Dexterous Hand V1"
 kind: "robot"
-maker: "Pathon Robotics"
+maker: "PathOn Robotics"
 category: "Dexterous Hand"
 description: "3-finger servo-actuated hand built around 7 DYNAMIXEL XL330-M288-T servos — research-grade feedback, printable CAD/STL/3MF."
-link: "https://github.com/PathOn-AI/pathon_opensource/tree/main/hardware/dexterous_hand/v1"
+link: "https://github.com/PathOn-AI/PathOnRoboticsOSS/tree/main/hardware/dexterous_hand/v1"
 image: "/robots/dexterous-hand-v1.png"
 specs:
   dof: "7"
@@ -17,7 +17,7 @@ specs:
 purpose:
   - "Research"
 media:
-  - title: "Pathon Dexterous Hand V1 demo"
+  - title: "PathOn Dexterous Hand V1 demo"
     url: "https://www.loom.com/share/230f5db9a7ae4e8f90ad7e18fb1e4fa1"
 components:
   - name: "DYNAMIXEL XL330-M288-T"
@@ -30,7 +30,7 @@ components:
 
 ## Overview
 
-The Pathon Dexterous Hand V1 is a 3-finger, servo-actuated hand designed for fast
+The PathOn Dexterous Hand V1 is a 3-finger, servo-actuated hand designed for fast
 prototyping and manipulation research. It is servo-actuated rather than
 tendon-driven, which keeps the accessory count low and the assembly simple, and
 the DYNAMIXEL XL330-M288-T gives full position / velocity / current feedback

@@ -1,10 +1,10 @@
 ---
 name: "Livox Mid-360 Mount for Unitree Go2"
 kind: "part"
-maker: "Pathon Robotics"
+maker: "PathOn Robotics"
 category: "Sensor Mount"
 description: "3D-printable cantilever bracket that holds a Livox Mid-360 LiDAR forward of the Go2's head for an unobstructed 360° horizontal FOV."
-link: "https://github.com/PathOn-AI/pathon_opensource/tree/main/hardware/livox_mid360_go2_mount"
+link: "https://github.com/PathOn-AI/PathOnRoboticsOSS/tree/main/hardware/livox_mid360_go2_mount"
 image: "/robots/livox-mid360-go2-mount.jpg"
 specs:
   fits: "Unitree Go2 + Livox Mid-360"

@@ -1,4 +1,4 @@
-const REPO = "https://github.com/PathOn-AI/pathon_opensource/tree/main";
+const REPO = "https://github.com/PathOn-AI/PathOnRoboticsOSS/tree/main";
 
 export interface Project {
   name: string;

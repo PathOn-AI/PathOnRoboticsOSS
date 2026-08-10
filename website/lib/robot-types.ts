@@ -13,7 +13,7 @@ export interface Component {
  */
 export type RobotKind = "robot" | "part";
 
-export const PATHON_MAKER = "Pathon Robotics";
+export const PATHON_MAKER = "PathOn Robotics";
 
 export const KIND_LABELS: Record<RobotKind, string> = {
   robot: "Robot",

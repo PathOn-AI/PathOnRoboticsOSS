@@ -3,9 +3,9 @@ import { getAllRobots } from "@/lib/robots";
 import { FilteredRobotGrid, RobotGrid } from "./robot-grid";
 
 export const metadata = {
-  title: "Robots & Parts — Pathon Robotics Open Source",
+  title: "Robots & Parts — PathOn Robotics Open Source",
   description:
-    "Robots we build at Pathon Robotics, the 3D-printable parts and mounts that go on them, and a map of the open-source platforms we work with.",
+    "Robots we build at PathOn Robotics, the 3D-printable parts and mounts that go on them, and a map of the open-source platforms we work with.",
 };
 
 export default function RobotsPage() {
@@ -18,7 +18,7 @@ export default function RobotsPage() {
           Robots &amp; Parts
         </h1>
         <p className="text-gray-600 text-lg">
-          Hardware we build at Pathon Robotics, plus a curated map of the
+          Hardware we build at PathOn Robotics, plus a curated map of the
           open-source and low-cost platforms we work with. Click any entry to
           learn more.
         </p>

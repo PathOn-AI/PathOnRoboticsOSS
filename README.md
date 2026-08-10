@@ -1,14 +1,14 @@
-# Pathon Robotics Open Source
+# PathOn Robotics Open Source
 
 [![discord-badge](https://dcbadge.limes.pink/api/server/xukJ3nh9wC)](https://discord.gg/xukJ3nh9wC)
 [![followers](https://custom-icon-badges.demolab.com/github/followers/PathOn-AI?color=236ad3&labelColor=1155ba&style=for-the-badge&logo=person-add&label=Follow&logoColor=white)](https://github.com/PathOn-AI?tab=followers)
-[![stars](https://custom-icon-badges.demolab.com/github/stars/PathOn-AI/pathon_opensource?color=55960c&style=for-the-badge&labelColor=488207&logo=star)](https://github.com/PathOn-AI/pathon_opensource/stargazers)
+[![stars](https://custom-icon-badges.demolab.com/github/stars/PathOn-AI/PathOnRoboticsOSS?color=55960c&style=for-the-badge&labelColor=488207&logo=star)](https://github.com/PathOn-AI/PathOnRoboticsOSS/stargazers)
 
-Open-source tools and resources by [Pathon Robotics](https://www.pathon.ai) — joint work with [PathOnAI.org](https://www.pathonai.org) — for building and controlling real robots.
+Open-source tools and resources by [PathOn Robotics](https://www.pathon.ai) — joint work with [PathOnAI.org](https://www.pathonai.org) — for building and controlling real robots.
 
 **Website**: https://www.pathon.ai/opensource
 
-**MakerWorld**: https://makerworld.com/en/@user_2131935394 — printable models from Pathon Robotics
+**MakerWorld**: https://makerworld.com/en/@user_2131935394 — printable models from PathOn Robotics
 
 Step-by-step tutorials at https://www.pathon.ai/blog
 

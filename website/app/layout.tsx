@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Pathon Robotics Open Source",
+  title: "PathOn Robotics Open Source",
   description:
     "Open-source tools and resources for building and controlling low-cost robots.",
   icons: {
@@ -113,7 +113,7 @@ export default function RootLayout({
           <div className="max-w-6xl mx-auto px-6 py-6 text-sm text-gray-500 text-center">
             Built by{" "}
             <a href="https://www.pathon.ai" className="text-green-600 hover:underline">
-              Pathon Robotics
+              PathOn Robotics
             </a>
           </div>
         </footer>

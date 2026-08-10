@@ -1,6 +1,6 @@
-# Pathon Dexterous Hand V2
+# PathOn Dexterous Hand V2
 
-A compact, servo-actuated dexterous hand designed for fast prototyping and manipulation research. Built around the **Feetech SCS0009** micro servo. This is **V2** of the Pathon Dexterous Hand.
+A compact, servo-actuated dexterous hand designed for fast prototyping and manipulation research. Built around the **Feetech SCS0009** micro servo. This is **V2** of the PathOn Dexterous Hand.
 
 | Isometric view | Servo reference |
 |---|---|

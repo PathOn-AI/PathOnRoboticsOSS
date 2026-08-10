@@ -24,7 +24,7 @@ export default function Home() {
               href="https://www.pathon.ai"
               className="text-green-600 hover:underline"
             >
-              Pathon Robotics
+              PathOn Robotics
             </a>
             .
           </p>
@@ -36,7 +36,7 @@ export default function Home() {
               Explore Robots &amp; Parts
             </Link>
             <a
-              href="https://github.com/PathOn-AI/pathon_opensource"
+              href="https://github.com/PathOn-AI/PathOnRoboticsOSS"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center px-6 py-3 border border-gray-300 rounded-lg font-medium hover:bg-gray-50 transition-colors"
@@ -71,7 +71,7 @@ export default function Home() {
       <section className="py-16 px-6">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-2xl font-bold mb-2 text-center">
-            Built by Pathon Robotics
+            Built by PathOn Robotics
           </h2>
           <p className="text-gray-600 text-center mb-8">
             Our own open hardware — CAD, printable STLs, and assembly guides in
@@ -91,7 +91,7 @@ export default function Home() {
                     className="absolute inset-0 w-full h-full object-cover"
                   />
                   <span className="absolute top-2 left-2 text-xs font-semibold px-2 py-1 bg-green-600 text-white rounded-full">
-                    Pathon Robotics
+                    PathOn Robotics
                   </span>
                   <span className="absolute top-2 right-2 text-xs font-medium px-2 py-1 bg-white/90 text-gray-700 rounded-full">
                     {KIND_LABELS[item.kind]}

@@ -1,4 +1,4 @@
-<mujoco model="so101_PathonAI_6dof_symmetric_gripper">
+<mujoco model="so101_PathOnAI_6dof_symmetric_gripper">
   <compiler angle="radian" meshdir="meshes/"/>
 
   <default>

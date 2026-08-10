@@ -1,10 +1,10 @@
 ---
-name: "Pathon Dexterous Hand V3 — Barrett-Style"
+name: "PathOn Dexterous Hand V3 — Barrett-Style"
 kind: "robot"
-maker: "Pathon Robotics"
+maker: "PathOn Robotics"
 category: "Dexterous Hand"
 description: "Barrett-style underactuated hand: 8 joints driven by 4 DYNAMIXEL servos, with MuJoCo + ROS 2 Jazzy + MoveIt 2 integration. Files not yet released."
-link: "https://github.com/PathOn-AI/pathon_opensource/tree/main/hardware/dexterous_hand/v3"
+link: "https://github.com/PathOn-AI/PathOnRoboticsOSS/tree/main/hardware/dexterous_hand/v3"
 image: "/robots/dexterous-hand-v3.svg"
 specs:
   fingers: "3"

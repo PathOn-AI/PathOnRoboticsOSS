@@ -1,4 +1,4 @@
-# Pathon Dexterous Hand
+# PathOn Dexterous Hand
 
 Compact, servo-actuated 3-finger dexterous hands for fast prototyping and manipulation research. Each version is a self-contained hardware package — CAD, printable STLs, and a pre-arranged print plate where available.
 

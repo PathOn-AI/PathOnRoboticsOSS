@@ -151,7 +151,7 @@ export function RobotGrid({
               : "bg-gray-100 text-gray-700 hover:bg-gray-200"
           }`}
         >
-          Built by Pathon
+          Built by PathOn
         </button>
       </div>
 
@@ -176,7 +176,7 @@ export function RobotGrid({
               />
               {robot.maker === PATHON_MAKER && (
                 <span className="absolute top-2 left-2 text-xs font-semibold px-2 py-1 bg-green-600 text-white rounded-full">
-                  Pathon Robotics
+                  PathOn Robotics
                 </span>
               )}
               <span className="absolute top-2 right-2 text-xs font-medium px-2 py-1 bg-white/90 text-gray-700 rounded-full">

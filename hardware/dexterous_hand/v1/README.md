@@ -1,6 +1,6 @@
-# Pathon Dexterous Hand V1
+# PathOn Dexterous Hand V1
 
-A 3-finger, servo-actuated dexterous hand designed for fast prototyping and manipulation research. Built around the **DYNAMIXEL XL330-M288-T**. This is **V1** of the Pathon Dexterous Hand.
+A 3-finger, servo-actuated dexterous hand designed for fast prototyping and manipulation research. Built around the **DYNAMIXEL XL330-M288-T**. This is **V1** of the PathOn Dexterous Hand.
 
 | Front view | Isometric view |
 |---|---|
@@ -10,7 +10,7 @@ A 3-finger, servo-actuated dexterous hand designed for fast prototyping and mani
 
 https://www.loom.com/share/230f5db9a7ae4e8f90ad7e18fb1e4fa1
 
-*Pathon Dexterous Hand V1 demo.*
+*PathOn Dexterous Hand V1 demo.*
 
 ## Design Goals
 

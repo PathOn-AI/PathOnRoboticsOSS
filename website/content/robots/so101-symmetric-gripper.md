@@ -1,10 +1,10 @@
 ---
 name: "SO-101 Symmetric Gripper"
 kind: "robot"
-maker: "Pathon Robotics"
+maker: "PathOn Robotics"
 category: "Gripper"
 description: "Rack-and-pinion parallel-jaw gripper for the SO-101 arm where both fingers move equally, giving balanced grasping force for reliable pick-and-place."
-link: "https://github.com/PathOn-AI/pathon_opensource/tree/main/hardware/so101_6dof_symmetric_gripper/hardware/3d_printed_parts/symmetric_gripper"
+link: "https://github.com/PathOn-AI/PathOnRoboticsOSS/tree/main/hardware/so101_6dof_symmetric_gripper/hardware/3d_printed_parts/symmetric_gripper"
 image: "/robots/so101-symmetric-gripper.png"
 specs:
   dof: "1"

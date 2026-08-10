@@ -15,7 +15,7 @@ setup(
     install_requires=["setuptools"],
     zip_safe=True,
     maintainer="PathOn Robotics",
-    maintainer_email="danqing@pathon.ai",
+    maintainer_email="info@pathon.ai",
     description="ROS2 driver for iPhone sensor streaming",
     license="MIT",
     entry_points={
