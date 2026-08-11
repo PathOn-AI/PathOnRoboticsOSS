@@ -19,14 +19,21 @@ export default function Home() {
           <p className="text-base md:text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
             Open hardware we design — robots, dexterous hands, grippers, and
             sensor mounts — plus a curated map of the low-cost platforms we build
-            on. By{" "}
+            on. Built by{" "}
             <a
               href="https://www.pathon.ai"
               className="text-green-600 hover:underline"
             >
               PathOn Robotics
+            </a>{" "}
+            in collaboration with{" "}
+            <a
+              href="https://www.pathonai.org"
+              className="text-green-600 hover:underline"
+            >
+              PathOnAI.org
             </a>
-            .
+            , an open-source AI and robotics research community.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -63,6 +70,48 @@ export default function Home() {
           <div>
             <div className="text-3xl font-bold text-green-600">100%</div>
             <div className="text-sm text-gray-500 mt-1">Open Source</div>
+          </div>
+        </div>
+      </section>
+
+      {/* Collaboration */}
+      <section className="py-16 px-6 border-b border-gray-200">
+        <div className="max-w-3xl mx-auto text-center">
+          <h2 className="text-2xl font-bold mb-4">A joint open-source effort</h2>
+          <p className="text-gray-600 mb-6">
+            The hardware and software here are built by PathOn Robotics together
+            with{" "}
+            <a
+              href="https://www.pathonai.org"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-green-600 hover:underline"
+            >
+              PathOnAI.org
+            </a>
+            , an open-source AI and robotics research community. Its research
+            volunteers work alongside our engineers on tracks like dexterous
+            manipulation — several designs in this repo started there. Everything
+            both sides produce ships open source, under permissive licenses, for
+            anyone to build on.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="https://www.pathonai.org"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-green-600 hover:underline text-sm font-medium"
+            >
+              Visit PathOnAI.org &rarr;
+            </a>
+            <a
+              href="https://discord.gg/xukJ3nh9wC"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-green-600 hover:underline text-sm font-medium"
+            >
+              Join the community Discord &rarr;
+            </a>
           </div>
         </div>
       </section>

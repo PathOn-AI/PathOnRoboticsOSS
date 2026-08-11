@@ -114,6 +114,10 @@ export default function RootLayout({
             Built by{" "}
             <a href="https://www.pathon.ai" className="text-green-600 hover:underline">
               PathOn Robotics
+            </a>{" "}
+            — joint work with{" "}
+            <a href="https://www.pathonai.org" className="text-green-600 hover:underline">
+              PathOnAI.org
             </a>
           </div>
         </footer>
