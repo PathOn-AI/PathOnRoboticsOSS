@@ -11,6 +11,8 @@ walk-around 3D scanner. Sensor, compute, power, and connectivity all ride in one
 body with a pistol grip and a tripod-style anti-tip base, so a mapping run needs nothing
 but the scanner in your hand.
 
+Designed by [tiger-pathon-robotics](https://github.com/tiger-pathon-robotics).
+
 ![Assembled handheld scanner](media/assembled.jpg)
 
 *Assembled unit — Livox Mid-360 on the tilted top plate, Raspberry Pi 5 in the upper body,
