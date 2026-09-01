@@ -21,6 +21,7 @@ Step-by-step tutorials at https://www.pathon.ai/blog
 | **Dexterous Hand** | Compact servo-actuated dexterous hands for prototyping and manipulation research — V1 (DYNAMIXEL XL330) and V2 (Feetech SCS0009), with CAD, STL, and 3MF files | [hardware/dexterous_hand/](hardware/dexterous_hand/) |
 | └ **Dexterous Hand V3 — Barrett-style** *(placeholder, files not yet released)* | 3-finger underactuated hand: 8 joints from 4 DYNAMIXEL servos — 2-link fingers plus a coupled spread DOF — with MuJoCo + ROS 2 Jazzy + MoveIt 2 integration | [hardware/dexterous_hand/v3/](hardware/dexterous_hand/v3/) |
 | **Livox Mid-360 Mount for Unitree Go2** | 3D-printable cantilever bracket that mounts a Livox Mid-360 LiDAR forward of the Go2's head for unobstructed 360° FOV | [hardware/livox_mid360_go2_mount/](hardware/livox_mid360_go2_mount/) |
+| **Handheld 3D LiDAR Scanner** *(placeholder, files not yet released)* | 3D-printable handheld enclosure that turns a Livox Mid-360 into a self-contained walk-around scanner — sensor, Raspberry Pi 5, power bank, and 4G dongle in one printed body | [hardware/handheld_lidar_scanner/](hardware/handheld_lidar_scanner/) |
 
 ## Software Projects
 
