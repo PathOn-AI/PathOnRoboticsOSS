@@ -4,7 +4,7 @@ kind: "robot"
 maker: "PathOn Robotics"
 category: "Mobile Base"
 description: "Line-following shuttle from the Smart Logistics Cell — moves material within one work cell, arm to arm, along tape on the floor. No map, no localization. Placeholder: built and running, files not yet released."
-link: "https://github.com/PathOn-AI/PathOnRoboticsOSS/tree/main/hardware/agv"
+link: "https://github.com/PathOn-AI/PathOnRoboticsOSS/tree/main/hardware/robots/agv"
 image: "/robots/pathon-agv.jpg"
 specs:
   job: "Shuttling within one work cell"

@@ -13,7 +13,9 @@ import {
 const KIND_TABS: { value: RobotKind | ""; label: string }[] = [
   { value: "", label: "All" },
   { value: "robot", label: "Robots" },
+  { value: "end_effector", label: "End Effectors" },
   { value: "part", label: "Mounts & Adapters" },
+  { value: "equipment", label: "Equipment" },
 ];
 
 /**
@@ -27,7 +29,7 @@ export function FilteredRobotGrid({ robots }: { robots: Robot[] }) {
   const kind = params.get("kind");
   const category = params.get("category") ?? "";
   const initialKind: RobotKind | "" =
-    kind === "robot" || kind === "part" ? kind : "";
+    kind && kind in KIND_LABELS ? (kind as RobotKind) : "";
   const initialCategory = robots.some(
     (r) => r.category === category && (!initialKind || r.kind === initialKind),
   )

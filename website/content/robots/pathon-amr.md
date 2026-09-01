@@ -4,7 +4,7 @@ kind: "robot"
 maker: "PathOn Robotics"
 category: "Mobile Base"
 description: "Nav2 mobile robot from the Smart Logistics Cell — carries material between work cells, holds a map, plans its own path, and routes around obstacles. Placeholder: built and running, files not yet released."
-link: "https://github.com/PathOn-AI/PathOnRoboticsOSS/tree/main/hardware/amr"
+link: "https://github.com/PathOn-AI/PathOnRoboticsOSS/tree/main/hardware/robots/amr"
 image: "/robots/pathon-amr.jpg"
 specs:
   job: "Delivery between work cells"

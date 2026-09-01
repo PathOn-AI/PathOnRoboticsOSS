@@ -1,10 +1,12 @@
-# SO-101 6DoF + Symmetric Gripper
+# SO-101 6DoF Wrist Upgrade
 
 [![discord-badge](https://dcbadge.limes.pink/api/server/xukJ3nh9wC)](https://discord.gg/xukJ3nh9wC)
 [![followers](https://custom-icon-badges.demolab.com/github/followers/PathOn-AI?color=236ad3&labelColor=1155ba&style=for-the-badge&logo=person-add&label=Follow&logoColor=white)](https://github.com/PathOn-AI?tab=followers)
 [![stars](https://custom-icon-badges.demolab.com/github/stars/PathOn-AI/PathOnRoboticsOSS?color=55960c&style=for-the-badge&labelColor=488207&logo=star)](https://github.com/PathOn-AI/PathOnRoboticsOSS/stargazers)
 
-An upgrade kit for the [SO-101](https://github.com/TheRobotStudio/SO-ARM100) robotic arm, adding a 6th degree of freedom (wrist pitch + yaw) and a symmetric parallel-jaw gripper. The 6DoF wrist enables the arm to approach objects from any angle, and the symmetric gripper provides balanced grasping force -- together enabling seamless integration with state-of-the-art grasp generation models and making it easier to grasp objects reliably.
+An upgrade kit for the [SO-101](https://github.com/TheRobotStudio/SO-ARM100) robotic arm, adding a **6th degree of freedom** (wrist pitch + yaw). The standard SO-101 is a 5DoF arm; two 3D-printed links replace the wrist so the arm can approach an object from any angle, which is what makes poses from off-the-shelf grasp-generation models reachable rather than merely computable.
+
+Its companion is the [symmetric gripper](../../end_effectors/symmetric_gripper/) -- the two were designed together, and the gripper mounts onto the yaw link built here.
 
 <p align="center">
   <img src="media/images/assembled.png" alt="Assembled SO-101 6DoF with symmetric gripper" width="500">
@@ -20,25 +22,20 @@ An upgrade kit for the [SO-101](https://github.com/TheRobotStudio/SO-ARM100) rob
 
 ## What's Included
 
-### 6DoF Wrist Upgrade
-The standard SO-101 is a 5DoF arm. This upgrade replaces the wrist with two new 3D-printed links (pitch and yaw), adding a 6th degree of freedom for greater dexterity.
+Two printed links that replace the SO-101 wrist:
 
 - `link_pitch` -- wrist pitch joint
 - `link_yaw` -- wrist yaw joint
 
-### Symmetric Gripper
-A rack-and-pinion parallel-jaw gripper where both fingers move equally, providing balanced gripping force. Designed for reliable pick-and-place and manipulation tasks.
-
-- `frame` -- gripper body
-- `cam` -- cam mechanism
-- `rack_up` / `rack_down` -- rack pair for symmetric motion
-- `l_gripper` / `r_gripper` -- left and right finger
+Plus the **simulation models for the whole arm**. `software/robot_assets/` holds the URDF and MJCF for the SO-101 with this wrist *and* the symmetric gripper as one kinematic chain -- there is no wrist-only or gripper-only model, so both live here.
 
 ## Prerequisites
 
-You need a built [SO-101 arm](https://github.com/TheRobotStudio/SO-ARM100) as the base. This kit provides the additional parts for the 6DoF upgrade and symmetric gripper.
+You need a built [SO-101 arm](https://github.com/TheRobotStudio/SO-ARM100) as the base. This kit provides the parts for the 6DoF upgrade.
 
 ## Demos
+
+The demos below exercise the complete assembly -- 6DoF wrist plus symmetric gripper.
 
 ### Vision-Language Grasping (Simulation)
 
@@ -67,8 +64,9 @@ https://www.loom.com/share/fe4379299d904ffc811d0ab0f7dc357c
 ## Getting Started
 
 1. Print the 3D parts -- see [hardware/](hardware/) for files and assembly instructions
-2. Assemble the wrist upgrade and gripper onto your SO-101
-3. Software integration -- coming soon
+2. Assemble the wrist upgrade onto your SO-101
+3. Fit the [symmetric gripper](../../end_effectors/symmetric_gripper/)
+4. Software integration -- coming soon
 
 ## 📰 News
 
@@ -84,4 +82,4 @@ https://www.loom.com/share/fe4379299d904ffc811d0ab0f7dc357c
 
 ## License
 
-See the root [LICENSE](../LICENSE) for details.
+See the root [LICENSE](../../../LICENSE) for details.

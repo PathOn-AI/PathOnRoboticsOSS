@@ -4,7 +4,7 @@ kind: "robot"
 maker: "PathOn Robotics"
 category: "Robotic Arm"
 description: "3D-printable 6-DOF leader arm for teleoperation, built around Feetech SCS215 serial bus servos with a squeeze trigger at the wrist."
-link: "https://github.com/PathOn-AI/PathOnRoboticsOSS/tree/main/hardware/piper_leader"
+link: "https://github.com/PathOn-AI/PathOnRoboticsOSS/tree/main/hardware/robots/piper_leader"
 image: "/robots/piper-leader.webp"
 specs:
   dof: "6"
