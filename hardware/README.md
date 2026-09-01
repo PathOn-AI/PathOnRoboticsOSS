@@ -18,7 +18,7 @@ robot.
 | Project | What it is |
 |---|---|
 | [`dexterous_hand/`](end_effectors/dexterous_hand/) | Three generations of 3-finger dexterous hand (V1, V2, V3) |
-| [`so101_symmetric_gripper/`](end_effectors/so101_symmetric_gripper/) | Rack-and-pinion parallel-jaw gripper; mounts to the 6DoF wrist |
+| [`symmetric_gripper/`](end_effectors/symmetric_gripper/) | Rack-and-pinion parallel-jaw gripper; mounts to the 6DoF wrist |
 
 ## [mounts/](mounts/)
 
@@ -42,4 +42,4 @@ These projects used to sit directly under `hardware/`:
 | `hardware/piper_leader/` | [`robots/piper_leader/`](robots/piper_leader/) |
 | `hardware/dexterous_hand/` | [`end_effectors/dexterous_hand/`](end_effectors/dexterous_hand/) |
 | `hardware/livox_mid360_go2_mount/` | [`mounts/livox_mid360_go2_mount/`](mounts/livox_mid360_go2_mount/) |
-| `hardware/so101_6dof_symmetric_gripper/` | split into [`robots/so101_6dof_wrist/`](robots/so101_6dof_wrist/) (wrist + arm models) and [`end_effectors/so101_symmetric_gripper/`](end_effectors/so101_symmetric_gripper/) (gripper) |
+| `hardware/so101_6dof_symmetric_gripper/` | split into [`robots/so101_6dof_wrist/`](robots/so101_6dof_wrist/) (wrist + arm models) and [`end_effectors/symmetric_gripper/`](end_effectors/symmetric_gripper/) (gripper) |

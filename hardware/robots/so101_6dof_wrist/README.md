@@ -6,7 +6,7 @@
 
 An upgrade kit for the [SO-101](https://github.com/TheRobotStudio/SO-ARM100) robotic arm, adding a **6th degree of freedom** (wrist pitch + yaw). The standard SO-101 is a 5DoF arm; two 3D-printed links replace the wrist so the arm can approach an object from any angle, which is what makes poses from off-the-shelf grasp-generation models reachable rather than merely computable.
 
-Its companion is the [symmetric gripper](../../end_effectors/so101_symmetric_gripper/) -- the two were designed together, and the gripper mounts onto the yaw link built here.
+Its companion is the [symmetric gripper](../../end_effectors/symmetric_gripper/) -- the two were designed together, and the gripper mounts onto the yaw link built here.
 
 <p align="center">
   <img src="media/images/assembled.png" alt="Assembled SO-101 6DoF with symmetric gripper" width="500">
@@ -65,7 +65,7 @@ https://www.loom.com/share/fe4379299d904ffc811d0ab0f7dc357c
 
 1. Print the 3D parts -- see [hardware/](hardware/) for files and assembly instructions
 2. Assemble the wrist upgrade onto your SO-101
-3. Fit the [symmetric gripper](../../end_effectors/so101_symmetric_gripper/)
+3. Fit the [symmetric gripper](../../end_effectors/symmetric_gripper/)
 4. Software integration -- coming soon
 
 ## 📰 News

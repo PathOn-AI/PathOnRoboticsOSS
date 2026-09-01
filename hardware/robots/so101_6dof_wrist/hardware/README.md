@@ -2,7 +2,7 @@
 
 This guide covers the **6DoF wrist upgrade** only. To fit the matching parallel-jaw
 gripper afterwards, continue with
-[`end_effectors/so101_symmetric_gripper/`](../../../end_effectors/so101_symmetric_gripper/) --
+[`end_effectors/symmetric_gripper/`](../../../end_effectors/symmetric_gripper/) --
 its frame mounts onto the yaw link you build here.
 
 ## Bill of Materials
@@ -93,4 +93,4 @@ Attach the Yaw servo horn to the top face of the pitch link and secure it with s
 </p>
 
 The wrist upgrade is now complete. To fit the gripper, continue with the
-[symmetric gripper assembly guide](../../../end_effectors/so101_symmetric_gripper/hardware/).
+[symmetric gripper assembly guide](../../../end_effectors/symmetric_gripper/hardware/).

@@ -1,10 +1,10 @@
 ---
-name: "SO-101 Symmetric Gripper"
+name: "Symmetric Gripper"
 kind: "end_effector"
 maker: "PathOn Robotics"
 category: "Gripper"
-description: "Rack-and-pinion parallel-jaw gripper for the SO-101 arm where both fingers move equally, giving balanced grasping force for reliable pick-and-place."
-link: "https://github.com/PathOn-AI/PathOnRoboticsOSS/tree/main/hardware/end_effectors/so101_symmetric_gripper"
+description: "Rack-and-pinion parallel-jaw gripper where both fingers move equally, giving balanced grasping force for reliable pick-and-place."
+link: "https://github.com/PathOn-AI/PathOnRoboticsOSS/tree/main/hardware/end_effectors/symmetric_gripper"
 image: "/robots/so101-symmetric-gripper.png"
 specs:
   dof: "1"
@@ -37,8 +37,7 @@ components:
 
 ## Overview
 
-A parallel-jaw gripper for the [SO-101](https://github.com/TheRobotStudio/SO-ARM100)
-arm in which both fingers move equally. A single STS3215 drives a pinion between two
+A parallel-jaw gripper in which both fingers move equally. A single STS3215 drives a pinion between two
 racks, so the jaws close symmetrically about the tool centre instead of one finger
 swinging into the other — the grasp point stays where the planner expects it, which
 is what makes the gripper work cleanly with grasp generation models.

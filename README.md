@@ -31,7 +31,7 @@ robot.
 
 | **Project** | **Description** | **Docs** |
 |---|---|---|
-| **SO-101 Symmetric Gripper** | Rack-and-pinion parallel-jaw gripper — both fingers move equally, so force is balanced about the tool axis. Mounts to the 6DoF wrist upgrade | [hardware/end_effectors/so101_symmetric_gripper/](hardware/end_effectors/so101_symmetric_gripper/) |
+| **Symmetric Gripper** | Rack-and-pinion parallel-jaw gripper — both fingers move equally, so force is balanced about the tool axis. Mounts to the 6DoF wrist upgrade | [hardware/end_effectors/symmetric_gripper/](hardware/end_effectors/symmetric_gripper/) |
 | **Dexterous Hand** | Compact servo-actuated dexterous hands for prototyping and manipulation research — V1 (DYNAMIXEL XL330) and V2 (Feetech SCS0009), with CAD, STL, and 3MF files | [hardware/end_effectors/dexterous_hand/](hardware/end_effectors/dexterous_hand/) |
 | └ **Dexterous Hand V3 — Barrett-style** *(placeholder, files not yet released)* | 3-finger underactuated hand: 8 joints from 4 DYNAMIXEL servos — 2-link fingers plus a coupled spread DOF — with MuJoCo + ROS 2 Jazzy + MoveIt 2 integration | [hardware/end_effectors/dexterous_hand/v3/](hardware/end_effectors/dexterous_hand/v3/) |
 
