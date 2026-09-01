@@ -22,6 +22,8 @@ Step-by-step tutorials at https://www.pathon.ai/blog
 | └ **Dexterous Hand V3 — Barrett-style** *(placeholder, files not yet released)* | 3-finger underactuated hand: 8 joints from 4 DYNAMIXEL servos — 2-link fingers plus a coupled spread DOF — with MuJoCo + ROS 2 Jazzy + MoveIt 2 integration | [hardware/dexterous_hand/v3/](hardware/dexterous_hand/v3/) |
 | **Livox Mid-360 Mount for Unitree Go2** | 3D-printable cantilever bracket that mounts a Livox Mid-360 LiDAR forward of the Go2's head for unobstructed 360° FOV | [hardware/livox_mid360_go2_mount/](hardware/livox_mid360_go2_mount/) |
 | **Handheld 3D LiDAR Scanner** *(placeholder, files not yet released)* | 3D-printable handheld enclosure that turns a Livox Mid-360 into a self-contained walk-around scanner — sensor, Raspberry Pi 5, power bank, and 4G dongle in one printed body | [hardware/handheld_lidar_scanner/](hardware/handheld_lidar_scanner/) |
+| **PathOn AGV — Line-Following Shuttle** *(placeholder, files not yet released)* | Line-following shuttle from the Smart Logistics Cell: moves material within one work cell, arm to arm, along tape on the floor — no map, no localization | [hardware/agv/](hardware/agv/) |
+| **PathOn AMR — Autonomous Mobile Robot** *(placeholder, files not yet released)* | Nav2 mobile robot from the Smart Logistics Cell: carries material between work cells, holds a map, plans its own path, and routes around obstacles | [hardware/amr/](hardware/amr/) |
 
 ## Software Projects
 
