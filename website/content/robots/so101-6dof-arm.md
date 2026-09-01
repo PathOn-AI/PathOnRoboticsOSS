@@ -4,7 +4,7 @@ kind: "robot"
 maker: "PathOn Robotics"
 category: "Robotic Arm"
 description: "The SO-101 arm upgraded from 5DoF to 6DoF — two printed wrist links (pitch + yaw) and one added STS3215 servo, so the arm can approach objects from any angle."
-link: "https://github.com/PathOn-AI/PathOnRoboticsOSS/tree/main/hardware/so101_6dof_symmetric_gripper/hardware/3d_printed_parts/6dof"
+link: "https://github.com/PathOn-AI/PathOnRoboticsOSS/tree/main/hardware/robots/so101_6dof_wrist"
 image: "/robots/so101-6dof-arm.png"
 specs:
   dof: "6 (5 stock + 1 added)"

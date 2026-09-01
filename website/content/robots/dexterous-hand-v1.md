@@ -4,7 +4,7 @@ kind: "end_effector"
 maker: "PathOn Robotics"
 category: "Dexterous Hand"
 description: "3-finger servo-actuated hand built around 7 DYNAMIXEL XL330-M288-T servos — research-grade feedback, printable CAD/STL/3MF."
-link: "https://github.com/PathOn-AI/PathOnRoboticsOSS/tree/main/hardware/dexterous_hand/v1"
+link: "https://github.com/PathOn-AI/PathOnRoboticsOSS/tree/main/hardware/end_effectors/dexterous_hand/v1"
 image: "/robots/dexterous-hand-v1.png"
 specs:
   dof: "7"

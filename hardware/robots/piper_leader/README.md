@@ -2,7 +2,7 @@
 
 A 3D-printable 6-DOF leader arm for teleoperation, built around Feetech SCS215
 serial bus servos. Several structural parts are shared with the
-[SO-101](../so101_6dof_symmetric_gripper) design.
+[SO-101 6DoF wrist upgrade](../so101_6dof_wrist/) design.
 
 | Isometric view | Side view |
 |---|---|

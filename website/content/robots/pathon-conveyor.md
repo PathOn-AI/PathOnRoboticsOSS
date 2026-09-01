@@ -4,7 +4,7 @@ kind: "equipment"
 maker: "PathOn Robotics"
 category: "Conveyor"
 description: "3D-printed belt conveyor that feeds the Smart Logistics Cell — carries a block to an IR-monitored pick point, where the sensor firing starts the whole line. Placeholder: built and running, files not yet released."
-link: "https://github.com/PathOn-AI/PathOnRoboticsOSS/tree/main/hardware/conveyor"
+link: "https://github.com/PathOn-AI/PathOnRoboticsOSS/tree/main/hardware/equipment/conveyor"
 image: "/robots/pathon-conveyor.jpg"
 specs:
   job: "Infeed — carries a block to a fixed pick point"

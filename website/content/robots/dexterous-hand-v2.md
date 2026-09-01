@@ -4,7 +4,7 @@ kind: "end_effector"
 maker: "PathOn Robotics"
 category: "Dexterous Hand"
 description: "Compact 3-finger hand built on Feetech SCS0009 micro servos — smaller and lighter than V1, with a prepared print plate."
-link: "https://github.com/PathOn-AI/PathOnRoboticsOSS/tree/main/hardware/dexterous_hand/v2"
+link: "https://github.com/PathOn-AI/PathOnRoboticsOSS/tree/main/hardware/end_effectors/dexterous_hand/v2"
 image: "/robots/dexterous-hand-v2.jpg"
 specs:
   fingers: "3"
