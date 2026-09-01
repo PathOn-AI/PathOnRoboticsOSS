@@ -1,6 +1,6 @@
 ---
 name: "PathOn Dexterous Hand V2"
-kind: "robot"
+kind: "end_effector"
 maker: "PathOn Robotics"
 category: "Dexterous Hand"
 description: "Compact 3-finger hand built on Feetech SCS0009 micro servos — smaller and lighter than V1, with a prepared print plate."

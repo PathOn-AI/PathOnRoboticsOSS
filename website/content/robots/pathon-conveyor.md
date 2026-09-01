@@ -1,6 +1,6 @@
 ---
 name: "PathOn Conveyor — Sensor-Triggered Infeed"
-kind: "robot"
+kind: "equipment"
 maker: "PathOn Robotics"
 category: "Conveyor"
 description: "3D-printed belt conveyor that feeds the Smart Logistics Cell — carries a block to an IR-monitored pick point, where the sensor firing starts the whole line. Placeholder: built and running, files not yet released."

@@ -1,6 +1,6 @@
 ---
 name: "Handheld 3D LiDAR Scanner"
-kind: "part"
+kind: "equipment"
 maker: "PathOn Robotics"
 category: "Handheld Scanner"
 description: "3D-printable handheld enclosure that turns a Livox Mid-360 into a self-contained walk-around 3D scanner — sensor, Raspberry Pi 5, power bank, and 4G dongle in one printed body. Placeholder: built and working, files not yet released."

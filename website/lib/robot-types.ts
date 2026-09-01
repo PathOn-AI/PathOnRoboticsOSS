@@ -7,17 +7,21 @@ export interface Component {
 }
 
 /**
- * The line is actuation, not standalone-ness:
- * "robot" — anything with motors you drive, including end-effectors (hands, grippers).
- * "part" — passive printed hardware: sensor mounts, arm-to-tool adapters.
+ * Each kind is defined by what an entry *is*, not by what it lacks:
+ * "robot"        — a complete actuated machine that works on its own: arms, mobile bases.
+ * "end_effector" — an actuated tool that mounts to an arm's flange: hands, grippers.
+ * "part"         — passive hardware joining two things: sensor mounts, arm-to-tool adapters.
+ * "equipment"    — standalone hardware that isn't a robot: instruments, line stations.
  */
-export type RobotKind = "robot" | "part";
+export type RobotKind = "robot" | "end_effector" | "part" | "equipment";
 
 export const PATHON_MAKER = "PathOn Robotics";
 
 export const KIND_LABELS: Record<RobotKind, string> = {
   robot: "Robot",
+  end_effector: "End Effector",
   part: "Mount & Adapter",
+  equipment: "Equipment",
 };
 
 /** A demo video or a post about this entry. The platform comes from the URL. */

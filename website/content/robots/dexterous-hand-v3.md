@@ -1,6 +1,6 @@
 ---
 name: "PathOn Dexterous Hand V3 — Barrett-Style"
-kind: "robot"
+kind: "end_effector"
 maker: "PathOn Robotics"
 category: "Dexterous Hand"
 description: "Barrett-style underactuated hand: 8 joints driven by 4 DYNAMIXEL servos. CAD assembly and the first printable STLs are released; 3MF, sim models and assembly docs are still to come."

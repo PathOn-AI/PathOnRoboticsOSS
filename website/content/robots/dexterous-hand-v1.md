@@ -1,6 +1,6 @@
 ---
 name: "PathOn Dexterous Hand V1"
-kind: "robot"
+kind: "end_effector"
 maker: "PathOn Robotics"
 category: "Dexterous Hand"
 description: "3-finger servo-actuated hand built around 7 DYNAMIXEL XL330-M288-T servos — research-grade feedback, printable CAD/STL/3MF."

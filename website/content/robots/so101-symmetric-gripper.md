@@ -1,6 +1,6 @@
 ---
 name: "SO-101 Symmetric Gripper"
-kind: "robot"
+kind: "end_effector"
 maker: "PathOn Robotics"
 category: "Gripper"
 description: "Rack-and-pinion parallel-jaw gripper for the SO-101 arm where both fingers move equally, giving balanced grasping force for reliable pick-and-place."
