@@ -10,6 +10,7 @@ robot.
 |---|---|
 | [`so101_6dof_wrist/`](robots/so101_6dof_wrist/) | 6DoF wrist upgrade (pitch + yaw) for the SO-101, plus the URDF/MJCF for the whole arm |
 | [`piper_leader/`](robots/piper_leader/) | 3D-printable 6-DOF leader arm for teleoperation |
+| [`openarm_leader/`](robots/openarm_leader/) | 3D-printable leader arm for teleoperating OpenArm V2 *(placeholder)* |
 | [`agv/`](robots/agv/) | Line-following shuttle from the Smart Logistics Cell *(placeholder)* |
 | [`amr/`](robots/amr/) | Nav2 autonomous mobile robot from the Smart Logistics Cell *(placeholder)* |
 

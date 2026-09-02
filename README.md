@@ -24,6 +24,7 @@ robot.
 |---|---|---|
 | **SO-101 6DoF Wrist Upgrade** | Adds a 6th degree of freedom (wrist pitch + yaw) to the SO-101 arm so it can approach from any angle — STL/STEP, assembly guide, and the URDF/MJCF for the whole arm | [hardware/robots/so101_6dof_wrist/](hardware/robots/so101_6dof_wrist/) |
 | **Piper Leader Arm** | 3D-printable 6-DOF leader arm for teleoperation built around Feetech SCS215 serial bus servos — hardware files, specs, demo | [hardware/robots/piper_leader/](hardware/robots/piper_leader/) |
+| **OpenArm Leader Arm** *(placeholder, under development)* | 3D-printable leader arm for teleoperating the 7-DOF OpenArm V2 — joint-position teleop at a fraction of the cost of the motorised leader OpenArm's bilateral path requires | [hardware/robots/openarm_leader/](hardware/robots/openarm_leader/) |
 | **PathOn AGV — Line-Following Shuttle** *(placeholder, files not yet released)* | Line-following shuttle from the Smart Logistics Cell: moves material within one work cell, arm to arm, along tape on the floor — no map, no localization | [hardware/robots/agv/](hardware/robots/agv/) |
 | **PathOn AMR — Autonomous Mobile Robot** *(placeholder, files not yet released)* | Nav2 mobile robot from the Smart Logistics Cell: carries material between work cells, holds a map, plans its own path, and routes around obstacles | [hardware/robots/amr/](hardware/robots/amr/) |
 

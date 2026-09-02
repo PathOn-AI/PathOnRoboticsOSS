@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { getAllRobots, getCategories, isPathon, KIND_LABELS } from "@/lib/robots";
+import { EntryImage } from "./entry-image";
 import { TOOLS } from "./software/tools-data";
 import { PROJECTS } from "./software/projects-data";
 
@@ -134,9 +135,8 @@ export default function Home() {
                 className="group block border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-shadow"
               >
                 <div className="aspect-video bg-gray-100 relative overflow-hidden">
-                  <img
-                    src={item.image}
-                    alt={item.name}
+                  <EntryImage
+                    robot={item}
                     className="absolute inset-0 w-full h-full object-cover"
                   />
                   <span className="absolute top-2 left-2 text-xs font-semibold px-2 py-1 bg-green-600 text-white rounded-full">

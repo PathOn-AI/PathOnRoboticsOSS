@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import { EntryImage } from "../../entry-image";
 import {
   embedFrameClass,
   embedUrl,
@@ -77,9 +78,8 @@ export default async function RobotPage({
       {/* Hero: image + description */}
       <section className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16 pb-16 border-b border-gray-200">
         <div className="rounded-lg overflow-hidden bg-gray-100">
-          <img
-            src={robot.image}
-            alt={robot.name}
+          <EntryImage
+            robot={robot}
             className="w-full h-full object-cover"
           />
         </div>

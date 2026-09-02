@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
+import { EntryImage } from "../entry-image";
 import {
   KIND_LABELS,
   PATHON_MAKER,
@@ -171,9 +172,8 @@ export function RobotGrid({
             className="group block border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-shadow"
           >
             <div className="aspect-video bg-gray-100 relative overflow-hidden">
-              <img
-                src={robot.image}
-                alt={robot.name}
+              <EntryImage
+                robot={robot}
                 className="absolute inset-0 w-full h-full object-cover"
               />
               {robot.maker === PATHON_MAKER && (

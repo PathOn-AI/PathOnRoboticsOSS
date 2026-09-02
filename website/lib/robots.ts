@@ -26,7 +26,7 @@ export function getAllRobots(): Robot[] {
         category: data.category,
         description: data.description,
         link: data.link,
-        image: `${BASE_PATH}${data.image}`,
+        image: data.image ? `${BASE_PATH}${data.image}` : undefined,
         content,
         specs: data.specs || {},
         components: data.components || [],

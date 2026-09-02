@@ -92,7 +92,8 @@ export interface Robot {
   category: string;
   description: string;
   link: string;
-  image: string;
+  /** Absent while a placeholder project has nothing to photograph yet. */
+  image?: string;
   content: string;
   specs: Record<string, string>;
   components: Component[];
