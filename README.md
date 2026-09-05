@@ -57,6 +57,33 @@ robot.
 | └ **Robot Assets Skills** | End-effector attachment stage of the pipeline — a Claude Code skill bundle for working with robot URDF/MJCF assets: attach end-effectors via MuJoCo MjSpec, convert URDF↔MJCF, with the post-processing fixups the underlying scripts don't handle | [software/diy_pipeline/robot-assets-skills/](software/diy_pipeline/robot-assets-skills/) |
 | **iPhone Sensor Suite** | Use iPhone as a full sensor suite (LiDAR, RGB, IMU) for robot manipulation and navigation — includes iOS app, Python SDK, ROS2 driver, and calibration | [software/iphone_sensor_suite/](software/iphone_sensor_suite/) |
 
+## License
+
+**Personal use only. No redistribution. No organizational or commercial use
+without written permission.** This repository is source-available, not open
+source.
+
+You are welcome to print these parts, build these robots, and modify them for
+your own personal, non-commercial use. You may not repost the files elsewhere,
+sell them or the parts printed from them, or use them inside an organization —
+a company, a school, or a university — in a product, a production line, a
+service, a course, a lab, or any other revenue-generating activity, without
+permission.
+
+| What | License |
+|---|---|
+| Everything under [`hardware/`](hardware/) — CAD, meshes, assembly docs, photos | [Standard Digital File License](hardware/LICENSE) |
+| [`software/`](software/), [`website/`](website/), and everything else | [Restricted Use License](LICENSE) |
+
+Licensing for organizations, including schools and universities, is
+available — contact the copyright holder.
+
+The one exception: the SO-101 arm-body meshes in
+[`hardware/robots/so101_6dof_wrist/software/robot_assets/`](hardware/robots/so101_6dof_wrist/software/robot_assets/)
+are derived from [SO-ARM100](https://github.com/TheRobotStudio/SO-ARM100) and
+remain under the Apache License 2.0, which does permit commercial use — see
+their [NOTICE](hardware/robots/so101_6dof_wrist/software/robot_assets/NOTICE).
+
 ## Resources
 
 See [lerobot_resources.md](lerobot_resources.md) for a curated list of open-source hardware, policy networks, teleoperation tools, datasets, and simulation environments.

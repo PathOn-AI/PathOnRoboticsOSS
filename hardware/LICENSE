@@ -1,0 +1,66 @@
+# Standard Digital File License
+
+Copyright (c) 2025 Danqing Zhang (danqing.zhang.personal@gmail.com)
+
+This license covers everything under `hardware/` — CAD sources, printable meshes
+(STL, STEP, 3MF), assembly documentation, bills of materials, photographs, and
+renders — except where the "Third-party content" section below says otherwise.
+Code and other material outside `hardware/` is covered by the [root LICENSE](../LICENSE).
+
+## Terms
+
+This user content is licensed under a Standard Digital File License.
+
+You shall not share, sub-license, sell, rent, host, transfer, or distribute in
+any way the digital or 3D printed versions of this object, nor any other
+derivative work of this object in its digital or physical format (including —
+but not limited to — remixes of this object, and hosting on other digital
+platforms). The objects may not be used without permission in any way
+whatsoever in which you charge money, or collect fees.
+
+## Permitted Use
+
+- **Personal Use**: Individuals may print, build, and modify this hardware for
+  their own personal, non-commercial purposes.
+
+No other use is granted by this license.
+
+## No Institutional or Commercial Use
+
+Beyond the resale restriction above, organizations may not use this hardware
+without explicit written permission from the copyright holder. This applies to
+companies, commercial entities, schools, universities, and other institutions
+alike, and covers use of the physical parts — including printing them for use
+in a product, a production line, a service, a course, a laboratory, a paid
+demonstration, or any other organizational or revenue-generating activity —
+whether or not the parts themselves are ever sold or transferred.
+
+Licensing for organizations, including schools and universities, is available
+from the copyright holder.
+
+## No Warranty
+
+This content is provided "as is", without warranty of any kind, express or
+implied. You assemble and operate this hardware at your own risk.
+
+## Third-party content
+
+Some files in this directory originate from upstream projects and remain under
+their own licenses, which this license does not and cannot override:
+
+- `robots/so101_6dof_wrist/software/robot_assets/meshes/base_link.stl`,
+  `shoulder_link_1.stl`, `upper_arm_link_1.stl`, `lower_arm_link_1.stl` —
+  geometry of the SO-101 arm body, derived from
+  [TheRobotStudio/SO-ARM100](https://github.com/TheRobotStudio/SO-ARM100),
+  licensed under the Apache License 2.0. See
+  [`robots/so101_6dof_wrist/software/robot_assets/NOTICE`](robots/so101_6dof_wrist/software/robot_assets/NOTICE).
+
+The PathOn Robotics original parts — the pitch and yaw wrist links, the
+symmetric gripper, and every other design in this directory — are covered by
+the terms above.
+
+## Permissions
+
+For permissions beyond the scope of this license — commercial use,
+redistribution, hosting on another platform — please contact the copyright
+holder.

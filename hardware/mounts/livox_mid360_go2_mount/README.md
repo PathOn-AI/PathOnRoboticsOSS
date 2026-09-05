@@ -65,3 +65,20 @@ PETG is preferred over PLA because the sensor (~265 g) is held at the end of a l
 - The Mid-360's downward FOV is roughly −7° to −52°; this cantilever pushes the sensor forward of the Go2 to keep the dog's body out of the lower cone.
 - A carbon-fiber roll cage (visible in the photos) is recommended to protect the sensor dome from falls.
 - Verify the sensor's +X axis points forward and the dome is level when the Go2 is standing — most LIO/SLAM stacks assume this.
+
+## License
+
+Hardware files in this project — CAD, meshes, assembly docs, and photos — are
+covered by the [hardware LICENSE](../../LICENSE), a Standard Digital File License:
+
+- **Personal use** — print, build, and modify these for your own personal,
+  non-commercial use.
+- **No redistribution** — do not repost the files or printed parts anywhere,
+  free or paid, including remixes.
+- **No organizational or commercial use** without written permission — this
+  applies to companies, schools, and universities alike, and covers selling the
+  files or prints *and* using the parts in a product, production line, service,
+  course, or lab.
+
+Licensing for organizations, including schools and universities, is available —
+contact the copyright holder.

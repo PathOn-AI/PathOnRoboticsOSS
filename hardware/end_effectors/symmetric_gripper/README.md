@@ -47,4 +47,17 @@ simulation and on the real robot, and MoveIt motion planning with point cloud ov
 
 ## License
 
-See the root [LICENSE](../../../LICENSE) for details.
+Hardware files in this project — CAD, meshes, assembly docs, and photos — are
+covered by the [hardware LICENSE](../../LICENSE), a Standard Digital File License:
+
+- **Personal use** — print, build, and modify these for your own personal,
+  non-commercial use.
+- **No redistribution** — do not repost the files or printed parts anywhere,
+  free or paid, including remixes.
+- **No organizational or commercial use** without written permission — this
+  applies to companies, schools, and universities alike, and covers selling the
+  files or prints *and* using the parts in a product, production line, service,
+  course, or lab.
+
+Licensing for organizations, including schools and universities, is available —
+contact the copyright holder.

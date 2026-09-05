@@ -109,3 +109,20 @@ Suggested print settings starting point:
 | Supports | Tree supports where needed |
 
 > CAD source files are not included in this V2 release. The `cad/` folder is present to mirror the V1 package layout.
+
+## License
+
+Hardware files in this project — CAD, meshes, assembly docs, and photos — are
+covered by the [hardware LICENSE](../../../LICENSE), a Standard Digital File License:
+
+- **Personal use** — print, build, and modify these for your own personal,
+  non-commercial use.
+- **No redistribution** — do not repost the files or printed parts anywhere,
+  free or paid, including remixes.
+- **No organizational or commercial use** without written permission — this
+  applies to companies, schools, and universities alike, and covers selling the
+  files or prints *and* using the parts in a product, production line, service,
+  course, or lab.
+
+Licensing for organizations, including schools and universities, is available —
+contact the copyright holder.

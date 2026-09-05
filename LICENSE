@@ -2,20 +2,26 @@
 
 Copyright (c) 2025 Danqing Zhang (danqing.zhang.personal@gmail.com)
 
+This license covers the software in this repository. Hardware design files —
+everything under `hardware/`, including CAD, printable meshes, assembly
+documentation, and photographs — are covered by [hardware/LICENSE](hardware/LICENSE)
+instead. Both licenses prohibit redistribution, and both prohibit
+organizational and commercial use without permission.
+
 ## Permissions
 
-- **Individual Use**: Individuals may use, copy, and modify this software for personal, non-commercial purposes.
-- **Academic Use**: Academic institutions may use this software for research and educational purposes.
+- **Personal Use**: Individuals may use, copy, and modify this software for their own personal, non-commercial purposes. No other use is granted by this license.
 
 ## Restrictions
 
 - **No Redistribution**: This software may not be redistributed, in whole or in part, without explicit written permission from the copyright holder.
 - **No Relicensing**: This software may not be relicensed under any other license.
-- **No Commercial Use by Companies**: Companies and commercial entities may not use this software for commercial purposes without explicit written permission from the copyright holder.
+- **No Institutional or Commercial Use**: Organizations may not use this software without explicit written permission from the copyright holder. This applies to companies, commercial entities, schools, universities, and other institutions alike, and covers use in a product, a service, a course, or a laboratory, whether or not revenue is generated.
 - **No Warranty**: This software is provided "as is", without warranty of any kind, express or implied.
 
 ## Additional Terms
 
 All copies or substantial portions of the software must include this license and copyright notice.
 
+Licensing for organizations, including schools and universities, is available.
 For permissions beyond the scope of this license, please contact the copyright holder. 

@@ -1,0 +1,43 @@
+SO-101 6DoF Wrist Upgrade — simulation assets
+Copyright (c) 2025 Danqing Zhang / PathOn Robotics
+
+This directory contains a robot model assembled from two sources.
+
+--------------------------------------------------------------------------------
+Upstream: SO-ARM100 / SO-101
+--------------------------------------------------------------------------------
+
+The following meshes describe the body of the SO-101 arm and are derived from
+the SO-ARM100 project by The Robot Studio:
+
+    meshes/base_link.stl
+    meshes/shoulder_link_1.stl
+    meshes/upper_arm_link_1.stl
+    meshes/lower_arm_link_1.stl
+
+    Source:  https://github.com/TheRobotStudio/SO-ARM100
+    License: Apache License 2.0
+
+A copy of the Apache License 2.0 is in LICENSE-APACHE-2.0 alongside this file.
+
+Modifications by PathOn Robotics: the parts were re-exported from a combined
+CAD assembly of the SO-101 with the 6DoF wrist upgrade and symmetric gripper.
+Meshes may differ from upstream in tessellation, units, and origin placement to
+match the URDF and MJCF in this directory.
+
+--------------------------------------------------------------------------------
+PathOn Robotics original work
+--------------------------------------------------------------------------------
+
+The remaining meshes are original designs by PathOn Robotics:
+
+    meshes/link_pitch_1.stl      wrist pitch link
+    meshes/link_yaw_v1_1.stl     wrist yaw link
+    meshes/link_roll_v1_1.stl    roll link
+    meshes/left_jaw_v1_1.stl     symmetric gripper jaw
+    meshes/right_jaw_v1_1.stl    symmetric gripper jaw
+
+    so101_PathonAI_6dof_symmetric_gripper.urdf
+    so101_PathonAI_6dof_symmetric_gripper.xml
+
+These are covered by the hardware LICENSE at the root of hardware/.
