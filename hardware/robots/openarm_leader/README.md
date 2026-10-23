@@ -80,5 +80,5 @@ contact the copyright holder.
 
 ## Links to the straps
 
-- [Trilancer anti-slip silicone elastic straps](https://www.amazon.com/dp/B0DPLXWT27) — joint 4 and joint 6
-- [Strap](https://www.amazon.com/dp/B0FS1JYQYK)
+- Joint 4: [Trilancer anti-slip silicone elastic straps](https://www.amazon.com/dp/B0DPLXWT27)
+- Joint 6: [Strap](https://www.amazon.com/dp/B0FS1JYQYK)
