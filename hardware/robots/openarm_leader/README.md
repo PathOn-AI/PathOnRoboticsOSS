@@ -12,6 +12,12 @@ arm joints and one for gripper input.
 
 *The assembled OpenArm leader arm.*
 
+## Demo
+
+https://www.loom.com/share/2e685700c64042b793715e626f05dbb4
+
+*Teleoperating an OpenArm with the PathOn Robotics 3D-printed OpenArm leader arm.*
+
 ## Specs
 
 | Spec | Value |

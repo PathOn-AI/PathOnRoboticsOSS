@@ -15,6 +15,9 @@ specs:
 purpose:
   - "Research"
   - "Education"
+media:
+  - title: "Teleoperating an OpenArm with the printed leader"
+    url: "https://www.loom.com/share/2e685700c64042b793715e626f05dbb4"
 components:
   - name: "Printed Links"
     type: "Structure — one leader joint per follower joint"
