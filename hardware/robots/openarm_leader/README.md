@@ -4,6 +4,10 @@ A 3D-printable 7-DOF leader arm for teleoperating [OpenArm](https://openarm.dev/
 built around eight Feetech STS3215-C046 serial bus servos per arm: seven for
 arm joints and one for gripper input.
 
+<img src="media/openarm_leader_assembled.jpg" alt="Assembled OpenArm leader arm" width="250">
+
+*The assembled OpenArm leader arm.*
+
 ## Specs
 
 | Spec | Value |
