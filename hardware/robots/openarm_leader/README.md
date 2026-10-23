@@ -1,66 +1,65 @@
 # OpenArm Leader Arm
 
-> **Status: placeholder — under development, nothing released.** There is no CAD, no BOM, no
-> printable meshes, and no photos yet. Everything below is design intent, not a built and
-> measured thing. This page exists so the work is visible while it happens.
+A 3D-printable 7-DOF leader arm for teleoperating [OpenArm](https://openarm.dev/),
+built around eight Feetech STS3215-C046 serial bus servos per arm: seven for
+arm joints and one for gripper input.
 
-A 3D-printable leader arm for teleoperating [**OpenArm V2**](https://openarm.dev) — the
-7-DOF, torque-controlled, CAN FD arm. Same idea as our
-[Piper leader arm](../piper_leader/): an operator moves the printed arm by hand, and the
-follower tracks its joint positions.
+## Specs
 
-## Why build one
-
-OpenArm's own teleoperation path is **bilateral, with force feedback** — and it gets that by
-using a **second motorised OpenArm** as the leader. That is an excellent capability with an
-awkward consequence: the leader costs about what the follower costs, and for a bimanual rig
-you are buying a whole second set of arms to drive the first. Bilateral control also wants a
-**≥500 Hz** loop, which in practice means a dedicated host rather than a thread on the robot's
-existing computer.
-
-A printed leader answers a different question: *what does it take to get a human driving this
-arm at all?* It gives up force feedback and returns joint-position teleoperation at roughly
-**2% of the arm's cost** — enough for demonstration capture, scripted-motion authoring, and
-teaching, which is most of what a leader arm is used for day to day.
-
-## What it cannot do, and why that is physics
-
-**A printed leader cannot give force feedback.** Not with better firmware, not with more
-tuning. The reason is worth stating plainly, because it is the whole design boundary:
-
-OpenArm is **quasi-direct drive** — a deliberately low gear ratio leaves each joint
-backdrivable, so joint torque is very nearly proportional to motor current, and current
-sensing becomes torque sensing for free. A printed leader built from hobby servos runs a
-**high** gear ratio, and its friction and backlash swamp exactly the signal that bilateral
-control depends on. No amount of software recovers the operator's force from underneath that.
-
-So the scope is fixed: **position-only leader–follower here; force feedback requires a
-quasi-direct-drive leader**, which means motors of the same class as the follower's.
-
-## Design intent
-
-Not specifications — these are the targets the design is being held to.
-
-| | Intent |
+| Spec | Value |
 |---|---|
-| **Follower** | OpenArm V2, 7 DOF |
-| **Joints** | One leader joint per follower joint, so the mapping needs no retargeting |
-| **Gripper** | Operator trigger at the wrist, as on the Piper leader |
-| **Teleop mode** | Joint-position only — explicitly **not** bilateral |
-| **Manufacturing** | FDM printable on a 256 × 256 mm bed |
-| **Cost** | A small fraction of the follower's — the reason this exists |
+| **DOF** | 7 arm DOF + 1 gripper input ([OpenArm specifications](https://docs.openarm.dev/)) |
+| **Servos** | 8 ? Feetech STS3215-C046 serial bus servo per arm (7.4 V, 1:147) |
+| **Protocol** | TTL serial bus (daisy-chained) |
+| **Feedback** | Position, velocity, load, voltage |
 
-## What a release would contain
+## Printed parts
 
-- [ ] CAD source and printable meshes
-- [ ] BOM: servos, bearings, fasteners
-- [ ] Joint mapping and calibration: leader zero, follower zero, and the transform between them
-- [ ] Teleoperation bringup, and how it joins the follower's CAN FD bus
-- [ ] Assembly guide and print orientations
-- [ ] A demo of the arm driving an OpenArm
+Dimensions in mm, from the STL bounding boxes.
 
-Interested in this one, or want to be told when it lands?
-[Discord](https://discord.gg/xukJ3nh9wC).
+| File | Bounding box (X ? Y ? Z) |
+|---|---|
+| [`cad_files/stl/j1.stl`](cad_files/stl/j1.stl) | 81.4 ? 66.5 ? 99.7 |
+| [`cad_files/stl/j2.stl`](cad_files/stl/j2.stl) | 56.6 ? 80.7 ? 40.1 |
+| [`cad_files/stl/j3.stl`](cad_files/stl/j3.stl) | 81.1 ? 51.9 ? 47.4 |
+| [`cad_files/stl/j4.stl`](cad_files/stl/j4.stl) | 159.2 ? 41.7 ? 52.0 |
+| [`cad_files/stl/j5.stl`](cad_files/stl/j5.stl) | 102.1 ? 51.9 ? 67.4 |
+| [`cad_files/stl/j6.stl`](cad_files/stl/j6.stl) | 52.7 ? 48.2 ? 54.0 |
+| [`cad_files/stl/j7.stl`](cad_files/stl/j7.stl) | 51.7 ? 54.2 ? 59.1 |
+| [`cad_files/stl/j8.stl`](cad_files/stl/j8.stl) | 54.7 ? 73.5 ? 77.4 |
+| [`cad_files/stl/j_handle.stl`](cad_files/stl/j_handle.stl) | 113.0 ? 25.0 ? 46.1 |
+| [`cad_files/stl/j_trigger.stl`](cad_files/stl/j_trigger.stl) | 42.0 ? 61.0 ? 36.0 |
+| [`cad_files/stl/waveshare_mount.stl`](cad_files/stl/waveshare_mount.stl) | 51.0 ? 42.0 ? 7.6 |
+
+## Files
+
+[STEP source](cad_files/step/) for editing and [STL meshes](cad_files/stl/) for
+print preparation. Each format contains the same 11 parts.
+
+```text
+openarm_leader/
+??? README.md
+??? cad_files/
+    ??? step/                    # STEP parts
+    ?   ??? j1.step ? j8.step
+    ?   ??? j_handle.step
+    ?   ??? j_trigger.step
+    ?   ??? waveshare_mount.step
+    ??? stl/                     # printable parts (binary STL)
+        ??? j1.stl ? j8.stl
+        ??? j_handle.stl
+        ??? j_trigger.stl
+        ??? waveshare_mount.stl
+```
+
+## Software
+
+Assign a unique servo ID before assembly: IDs 1?7 for the arm joints and ID 8
+for the gripper input. Use a compatible Feetech servo configuration tool and a
+Waveshare Serial Bus Servo Driver Board.
+
+Calibrate the leader joint positions and verify the joint mapping before
+teleoperating the follower.
 
 ## License
 
