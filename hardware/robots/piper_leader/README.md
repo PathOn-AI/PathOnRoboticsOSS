@@ -31,28 +31,35 @@ Dimensions in mm, from the STL bounding boxes.
 
 | File | Bounding box (X × Y × Z) |
 |---|---|
-| [`stl/base.stl`](stl/base.stl) | 91.2 × 24.5 × 58.2 |
-| [`stl/shoulder.stl`](stl/shoulder.stl) | 57.0 × 50.4 × 78.2 |
-| [`stl/upper_arm.stl`](stl/upper_arm.stl) | 219.9 × 24.0 × 50.1 |
-| [`stl/lower_arm.stl`](stl/lower_arm.stl) | 135.4 × 66.6 × 53.4 |
-| [`stl/pitch.stl`](stl/pitch.stl) | 77.9 × 51.9 × 47.4 |
-| [`stl/roll_1.stl`](stl/roll_1.stl) | 30.2 × 30.6 × 50.0 |
-| [`stl/roll_2.stl`](stl/roll_2.stl) | 37.9 × 51.0 × 35.0 |
+| [`cad/stl/base.stl`](cad/stl/base.stl) | 91.2 × 24.5 × 58.2 |
+| [`cad/stl/shoulder.stl`](cad/stl/shoulder.stl) | 57.0 × 50.4 × 78.2 |
+| [`cad/stl/upper_arm.stl`](cad/stl/upper_arm.stl) | 219.9 × 24.0 × 50.1 |
+| [`cad/stl/lower_arm.stl`](cad/stl/lower_arm.stl) | 135.4 × 66.6 × 53.4 |
+| [`cad/stl/pitch.stl`](cad/stl/pitch.stl) | 77.9 × 51.9 × 47.4 |
+| [`cad/stl/roll_1.stl`](cad/stl/roll_1.stl) | 30.2 × 30.6 × 50.0 |
+| [`cad/stl/roll_2.stl`](cad/stl/roll_2.stl) | 37.9 × 51.0 × 35.0 |
+
+> **Servo mount update:** `upper_arm.stl`, `lower_arm.stl` and `pitch.stl` have a
+> revised servo mount. The servo now installs in the correct orientation and the
+> mounting holes line up with the servo's (which sit at different heights on each
+> side), for a proper fit. The servo can still be installed in the original
+> orientation.
 
 ## Files
 
 ```
 piper_leader/
 ├── cad/
-│   └── piper_leader.step    # full assembly (STEP), mm
-├── stl/                     # printable parts (binary STL)
-│   ├── base.stl
-│   ├── shoulder.stl
-│   ├── upper_arm.stl
-│   ├── lower_arm.stl
-│   ├── pitch.stl
-│   ├── roll_1.stl
-│   └── roll_2.stl
+│   ├── step/                    # STEP, mm
+│   │   └── piper_leader.step    # full assembly
+│   └── stl/                     # printable parts (binary STL)
+│       ├── base.stl
+│       ├── shoulder.stl
+│       ├── upper_arm.stl
+│       ├── lower_arm.stl
+│       ├── pitch.stl
+│       ├── roll_1.stl
+│       └── roll_2.stl
 └── media/
     ├── piper_leader_iso.webp
     └── piper_leader_side.webp
