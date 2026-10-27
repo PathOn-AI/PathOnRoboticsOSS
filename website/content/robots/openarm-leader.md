@@ -3,38 +3,49 @@ name: "OpenArm Leader Arm"
 kind: "robot"
 maker: "PathOn Robotics"
 category: "Robotic Arm"
-description: "3D-printable leader arm for teleoperating the 7-DOF OpenArm V2 — joint-position teleop at a fraction of the cost of the motorised leader that OpenArm's bilateral path requires. Placeholder: under development, nothing released."
+description: "3D-printable 7-DOF leader arm for teleoperating OpenArm, built around eight Feetech STS3215 serial bus servos with a trigger at the wrist for gripper input — joint-position teleop at a fraction of the cost of a motorised leader."
 link: "https://github.com/PathOn-AI/PathOnRoboticsOSS/tree/main/hardware/robots/openarm_leader"
+image: "/robots/openarm-leader.png"
 specs:
-  follower: "OpenArm V2, 7 DOF, torque-controlled"
+  dof: "7 arm DOF + 1 gripper input"
+  servos: "8 × Feetech STS3215-C046 serial bus (7.4 V, 1:147)"
+  interfaces: "TTL serial bus (daisy-chained)"
+  feedback: "Position, velocity, load, voltage"
+  gripper: "Trigger at the wrist"
   teleop: "Joint-position only — not bilateral"
-  gripper: "Operator trigger at the wrist"
-  manufacturing: "FDM, 256 × 256 mm bed"
-  formats: "None released yet"
-  status: "Placeholder — under development, nothing released"
+  printbed: "159 mm largest part — fits 256 mm bed"
+  formats: "STEP, STL (11 parts)"
+  status: "Released — STL, CAD, specs"
 purpose:
+  - "Teleoperation"
   - "Research"
   - "Education"
 media:
   - title: "Teleoperating an OpenArm with the printed leader"
     url: "https://www.loom.com/share/2e685700c64042b793715e626f05dbb4"
 components:
-  - name: "Printed Links"
-    type: "Structure — one leader joint per follower joint"
-  - name: "Serial Bus Servos"
-    type: "Joint position sensing"
+  - name: "Feetech STS3215-C046 Serial Bus Servos"
+    type: "Actuators (x8)"
+  - name: "3D-Printed Structure"
+    type: "11 printed parts, STEP + STL"
   - name: "Wrist Trigger"
-    type: "Gripper input"
+    type: "Gripper Input"
+  - name: "Waveshare Serial Bus Servo Driver Board"
+    type: "Servo interface"
 ---
 
 ## Overview
 
-> **Placeholder.** Under development — there's no CAD, no BOM, no printable meshes, and no
-> photos yet. Everything here is design intent, not a built and measured thing.
-
-A 3D-printable leader arm for teleoperating [OpenArm V2](https://openarm.dev), the 7-DOF
+A 3D-printable 7-DOF leader arm for teleoperating [OpenArm](https://openarm.dev), the
 torque-controlled arm. Same idea as our [Piper leader arm](/opensource/robots/piper-leader):
 an operator moves the printed arm by hand and the follower tracks its joint positions.
+
+Each arm uses eight Feetech STS3215-C046 serial bus servos: seven for the arm joints and one
+for gripper input from a trigger at the wrist. Every servo reports position, velocity, load,
+and voltage over a daisy-chained TTL serial bus through a Waveshare Serial Bus Servo Driver
+Board.
+
+The image above is a CAD render; an assembled-arm photo is in the repository README.
 
 ## Why build one
 
@@ -45,9 +56,9 @@ set of arms to drive the first. Bilateral control also wants a ≥500 Hz loop, w
 means a dedicated host rather than a thread on the robot's existing computer.
 
 A printed leader answers a different question — what does it take to get a human driving this
-arm at all? It gives up force feedback and returns joint-position teleoperation at roughly 2%
-of the arm's cost, which covers most of what a leader arm does day to day: demonstration
-capture, scripted-motion authoring, and teaching.
+arm at all? It gives up force feedback and returns joint-position teleoperation at a small
+fraction of the arm's cost, which covers most of what a leader arm does day to day:
+demonstration capture, scripted-motion authoring, and teaching.
 
 ## What it can't do, and why that's physics
 
@@ -55,12 +66,27 @@ A printed leader **cannot** give force feedback. Not with better firmware, not w
 
 OpenArm is quasi-direct-drive: a deliberately low gear ratio leaves each joint backdrivable, so
 joint torque is very nearly proportional to motor current, and current sensing becomes torque
-sensing for free. A printed leader built from hobby servos runs a *high* gear ratio, and its
-friction and backlash swamp exactly the signal bilateral control depends on. No amount of
-software recovers the operator's force from underneath that.
+sensing for free. A printed leader built from hobby servos runs a *high* gear ratio (1:147 here),
+and its friction and backlash swamp exactly the signal bilateral control depends on. No amount
+of software recovers the operator's force from underneath that.
 
 So the scope is fixed: position-only leader–follower here; force feedback requires a
 quasi-direct-drive leader, meaning motors of the same class as the follower's.
+
+## Printing
+
+Eleven printed parts: eight joint parts (`j1` through `j8`), a handle, a trigger, and a mount
+for the Waveshare driver board. The largest part is 159 mm, so the whole arm fits on a 256 mm
+bed (Bambu A1 / P1S). STEP source is provided for editing and binary STL for print preparation.
+
+Joints 4 and 6 use anti-slip silicone elastic straps; links are in the repository README.
+
+## Setup
+
+Assign each servo a unique ID before assembly: IDs 1–7 for the arm joints and ID 8 for the
+gripper input, using a Feetech servo configuration tool and the Waveshare driver board. Then
+calibrate the leader joint positions and verify the joint mapping before teleoperating the
+follower.
 
 ## Use Cases
 
