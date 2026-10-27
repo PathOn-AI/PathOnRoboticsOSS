@@ -3,9 +3,8 @@ name: "PathOn Dexterous Hand V3 — Barrett-Style"
 kind: "end_effector"
 maker: "PathOn Robotics"
 category: "Dexterous Hand"
-description: "Barrett-style underactuated hand: 8 joints driven by 4 DYNAMIXEL servos. CAD assembly and the first printable STLs are released; 3MF, sim models and assembly docs are still to come."
+description: "Barrett-style underactuated hand: 8 joints driven by 4 DYNAMIXEL servos. CAD assembly and the first printable STLs are released and will be updated; renders, STEP, 3MF, sim models and assembly docs are still to come."
 link: "https://github.com/PathOn-AI/PathOnRoboticsOSS/tree/main/hardware/end_effectors/dexterous_hand/v3"
-image: "/robots/dexterous-hand-v3.webp"
 specs:
   fingers: "3"
   dof: "8 joints / 4 actuated DOF"
@@ -13,8 +12,8 @@ specs:
   interfaces: "TTL half-duplex daisy chain"
   material: "PLA / PETG, 0.2 mm layers"
   printbed: "256 × 256 mm"
-  formats: "SolidWorks CAD, STL"
-  status: "Partial release — CAD + first STLs"
+  formats: "SolidWorks CAD, STL — to be updated; STEP to come"
+  status: "Partial release — CAD + first STLs, to be updated"
 purpose:
   - "Research"
 media:
@@ -58,15 +57,19 @@ Jazzy, and MoveIt 2. Those models exist in-house but are not part of this releas
 
 - SolidWorks CAD: the full `dex_hand` assembly plus per-part source
 - First printable STLs: palm plate, proximal link, distal link, finger base
-- Isometric CAD render of the assembly
 
-Still to come: the complete STL set (coupler, spread gear), a pre-arranged Bambu
-Studio 3MF plate, the URDF/MJCF simulation models, the printed wrist adapter, and
-the assembly guide with a fastener and bearing BOM.
+The released CAD and STL files are an early cut and **will be updated**; a neutral
+STEP export is planned alongside the SolidWorks source. Renders and photos of the
+hand are to be released.
+
+Still to come: updated STEP/STL files, the complete STL set (coupler, spread gear),
+a pre-arranged Bambu Studio 3MF plate, renders and photos, the URDF/MJCF simulation
+models, the printed wrist adapter, and the assembly guide with a fastener and
+bearing BOM.
 
 ## Measured vs. Target
 
-The image above is a **CAD render, not a photo** — no hand has been assembled yet.
+No hand has been assembled yet, and no render or photo is published yet.
 Bounding boxes and mesh integrity come from the committed STLs (the palm measures
 150.2 mm across; the proximal + distal link stack is 81 + 52.6 mm). Everything
 else — joint count, DOF, travel ranges, the ≤ 600 g mass budget — is design
