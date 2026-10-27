@@ -3,10 +3,11 @@
 > **This is the hand we are actively developing.** V3 is PathOn Robotics' current in-house
 > dexterous hand — [V1](../v1/) is the complete package to build today, but new work goes here.
 >
-> **Status: partial release.** The CAD assembly and the first printable meshes are now in this
-> folder. Still to come: the pre-arranged 3MF print plate, renders/photos, the URDF/MJCF
-> simulation models, and the printed wrist adapter. Everything in the *Target Specs* table below
-> is still a **design target**, not an as-built measurement — see
+> **Status: not finalized.** The CAD assembly and the first printable meshes in this folder are
+> an early cut, and we are working on a new revision that will replace them — expect the STEP/STL
+> files to be updated. Still to come: updated CAD/STL, the pre-arranged 3MF print plate,
+> renders/photos, the URDF/MJCF simulation models, and the printed wrist adapter. Everything in
+> the *Target Specs* table below is still a **design target**, not an as-built measurement — see
 > [What is measured](#what-is-measured).
 
 A 3-finger, **Barrett-style** dexterous hand: high grasp versatility from very few actuators, built around **DYNAMIXEL X-series** servos. This is **V3** of the PathOn Dexterous Hand, following [V1](../v1/) (DYNAMIXEL XL330) and [V2](../v2/) (Feetech SCS0009).

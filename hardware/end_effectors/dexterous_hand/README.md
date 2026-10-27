@@ -6,12 +6,12 @@ Compact, servo-actuated 3-finger dexterous hands for fast prototyping and manipu
 |---|---|---|---|---|
 | [**V1**](v1/) | 7 × DYNAMIXEL XL330-M288-T | 3 (2 + opposable thumb) | Research-grade servos with full position / velocity / current feedback | Released — CAD, STL, 3MF |
 | [**V2**](v2/) | Feetech SCS0009 | 3 | Smaller, lighter actuator package; simpler printable layout | ⚠️ **Reference only** — published as-is; see [known issues](v2/README.md#known-issues) |
-| [**V3**](v3/) | 4 × DYNAMIXEL X-series | 3 | Barrett-style: 8 joints from 4 motors — underactuated 2-link fingers + coupled spread DOF | Partial release — CAD + first STLs; 3MF, sim models and assembly docs pending |
+| [**V3**](v3/) | 4 × DYNAMIXEL X-series | 3 | Barrett-style: 8 joints from 4 motors — underactuated 2-link fingers + coupled spread DOF | **Not finalized** — early CAD + first STLs released and will be updated; a new revision is in progress. Renders, 3MF, sim models and assembly docs pending |
 
 ## Which version should I use?
 
 - **[V1](v1/) — build this one.** Complete and released: STEP source, STLs, a pre-arranged print plate, full servo specs, and a demo of a working hand.
-- **[V3](v3/) — watch this one.** Our current in-house hand and where active development is going: Barrett-style, 8 joints on 4 motors, modelled for MuJoCo + ROS 2. Partially released and still changing — CAD and first STLs are up; the 3MF, sim models, and assembly docs are not.
+- **[V3](v3/) — watch this one, don't build it yet.** Our current in-house hand and where active development is going: Barrett-style, 8 joints on 4 motors, modelled for MuJoCo + ROS 2. **V3 is not finalized.** The CAD and first STLs that are up are an early cut, and we are working on a new revision that will replace them — expect the STEP/STL files to change. Renders, the 3MF, sim models, and assembly docs are not released yet.
 - **[V2](v2/) — ⚠️ reference only.** **A volunteer-led design that did not go through the same review as V1 and V3. We publish it as-is**, and it has [**known issues**](v2/README.md#known-issues) that prevent it from being assembled as released. Kept for its Feetech-based layout, which is smaller and cheaper than either DYNAMIXEL version.
 
 ## How the versions relate
