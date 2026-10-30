@@ -11,8 +11,6 @@ Open-source tools and resources by [PathOn Robotics](https://www.pathon.ai) — 
 
 **MakerWorld**: https://makerworld.com/en/@user_2131935394 — printable models from PathOn Robotics
 
-Step-by-step tutorials at https://www.pathon.ai/blog
-
 ## Hardware Projects
 
 Grouped the way the catalog is: a **robot** works on its own, an **end effector** mounts to
