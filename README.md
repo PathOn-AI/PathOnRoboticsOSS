@@ -94,7 +94,7 @@ If you use PathOn Robotics hardware or software in your work, please cite:
 ```bibtex
 @article{zhang2026pathon,
   title={PathOn Robotics: Open-Source Robot Hardware and Software (2026). doi: 10.5281/zenodo.23305306},
-  author={Zhang, Danqing and Parasuraman, Gowtham and Chandramouli, Nishanth and Zhang, Tiger and Chen, Huanbin and Wei, Nona and Ni, Jingyi},
+  author={Zhang, Danqing and Parasuraman, Gowtham and Chandramouli, Nishanth and Lu, Qiang and Zhang, Tiger and Chen, Huanbin and Wei, Nona and Ni, Jingyi},
   journal={URL https://doi.org/10.5281/zenodo},
   volume={23305306},
   year={2026}
