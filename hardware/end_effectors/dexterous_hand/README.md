@@ -6,12 +6,12 @@ Compact, servo-actuated 3-finger dexterous hands for fast prototyping and manipu
 |---|---|---|---|---|
 | [**V1**](v1/) | 7 × DYNAMIXEL XL330-M288-T | 3 (2 + opposable thumb) | Research-grade servos with full position / velocity / current feedback | Released — CAD, STL, 3MF |
 | [**V2**](v2/) | Feetech SCS0009 | 3 | Smaller, lighter actuator package; simpler printable layout | ⚠️ **Reference only** — published as-is; see [known issues](v2/README.md#known-issues) |
-| [**V3**](v3/) | 4 × DYNAMIXEL X-series | 3 | Barrett-style: 8 joints from 4 motors — underactuated 2-link fingers + coupled spread DOF | **Not finalized** — early CAD + first STLs released and will be updated; a new revision is in progress. Renders, 3MF, sim models and assembly docs pending |
+| [**V3**](v3/) | 4 × DYNAMIXEL XL330-M288-T | 3 (two on a geared spread + thumb) | The hand on our robot: one servo per finger plus a geared spread, soft printed fingertips; hosted step-by-step assembly guide | Released — STL, [assembly guide](https://web-6gov.vercel.app/), [demo video](https://www.loom.com/share/fe40257b80d7402cbd5068077b4870d3). 3MF and photos pending |
 
 ## Which version should I use?
 
 - **[V1](v1/) — build this one.** Complete and released: STEP source, STLs, a pre-arranged print plate, full servo specs, and a demo of a working hand.
-- **[V3](v3/) — watch this one, don't build it yet.** Our current in-house hand and where active development is going: Barrett-style, 8 joints on 4 motors, modelled for MuJoCo + ROS 2. **V3 is not finalized.** The CAD and first STLs that are up are an early cut, and we are working on a new revision that will replace them — expect the STEP/STL files to change. Renders, the 3MF, sim models, and assembly docs are not released yet.
+- **[V3](v3/) — the hand we actually run.** Four XL330 servos: one per finger plus a geared spread drive, soft fins at the fingertips, built and running on our robot since October 2026. Printable STLs, an interactive assembly guide at <https://web-6gov.vercel.app/>, and a [demo video](https://www.loom.com/share/fe40257b80d7402cbd5068077b4870d3) of it picking up a plush bear. No print plate or photos yet, so V1 is still the easier first build.
 - **[V2](v2/) — ⚠️ reference only.** **A volunteer-led design that did not go through the same review as V1 and V3. We publish it as-is**, and it has [**known issues**](v2/README.md#known-issues) that prevent it from being assembled as released. Kept for its Feetech-based layout, which is smaller and cheaper than either DYNAMIXEL version.
 
 ## How the versions relate
@@ -20,7 +20,7 @@ Compact, servo-actuated 3-finger dexterous hands for fast prototyping and manipu
 
 **Actuator ecosystems are not mixed freely.** V1 and V3 are DYNAMIXEL (Protocol 2.0, U2D2, DYNAMIXEL SDK); V2 is Feetech (SCS serial bus, FE-URT-1, SCServo SDK). The two cannot share a bus or a controller, and only the DYNAMIXEL side gives you current feedback for grasp-force control. Pick the version that matches the stack you already run.
 
-**V3** changes the approach. Instead of adding a motor for every joint, it takes the Barrett Hand topology — mechanical couplings close the gap between joints and actuators, so **8 joints run on 4 motors**: three underactuated 2-link fingers that conform to the object shape, plus one spread DOF that rotates two fingers about the palm axis to reconfigure between pinch, wrap, and cylindrical grasps. It is also the first version modelled for a full simulation stack (MuJoCo + ROS 2 Jazzy + MoveIt 2).
+**V3** keeps one motor per finger but drops the per-joint budget elsewhere: a single spread servo turns two fingers about the palm through meshing printed gears, and the fingers are single links with soft fins instead of jointed phalanges, so compliance comes from the fingertip rather than from a second joint. Four motors, four DOF, the same DYNAMIXEL stack as V1, and it is the version with a hosted assembly guide.
 
 ## Printing
 
