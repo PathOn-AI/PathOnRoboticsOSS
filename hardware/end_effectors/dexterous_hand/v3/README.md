@@ -1,163 +1,111 @@
-# PathOn Dexterous Hand V3 — Barrett-Style
+# PathOn Dexterous Hand V3 — 3 fingers, 4 motors
 
-> **This is the hand we are actively developing.** V3 is PathOn Robotics' current in-house
-> dexterous hand — [V1](../v1/) is the complete package to build today, but new work goes here.
+> **This is the hand on our robot.** V3 is PathOn Robotics' current in-house dexterous hand: built,
+> calibrated, and running grasps since 2026-10-15. [V1](../v1/) stays the simplest complete kit; V3 is
+> the one we use.
 >
-> **Status: not finalized.** The CAD assembly and the first printable meshes in this folder are
-> an early cut, and we are working on a new revision that will replace them — expect the STEP/STL
-> files to be updated. Still to come: updated CAD/STL, the pre-arranged 3MF print plate,
-> renders/photos, the URDF/MJCF simulation models, and the printed wrist adapter. Everything in
-> the *Target Specs* table below is still a **design target**, not an as-built measurement — see
-> [What is measured](#what-is-measured).
+> **Released here:** the printable STLs for every part and CAD renders.
+> **Assembly guide:** interactive, step by step, at **<https://web-6gov.vercel.app/>**.
+> **Demo video:** [the hand picking up a plush bear on our mobile manipulator](https://www.loom.com/share/fe40257b80d7402cbd5068077b4870d3)
+> (Loom, recorded 2026-10-19).
 
-A 3-finger, **Barrett-style** dexterous hand: high grasp versatility from very few actuators, built around **DYNAMIXEL X-series** servos. This is **V3** of the PathOn Dexterous Hand, following [V1](../v1/) (DYNAMIXEL XL330) and [V2](../v2/) (Feetech SCS0009).
+A compact 3-finger hand on **four DYNAMIXEL XL330-M288-T** servos: one servo per finger for flexion,
+plus one spread servo that rotates two of the fingers about the palm through a pair of meshing gears.
+Fingers are single printed links with soft fins, so the grasp conforms to the object through the fin
+rather than through a second joint. The palm is a printed box with a top plate; the two spread fingers
+sit on turrets that ride on F6803ZZ bearings around an idler pin.
 
-The hand itself is arm-agnostic — the only arm-specific part is the printed wrist adapter. Our reference integration is the AgileX Piper 6-DOF arm; swapping the adapter is what it takes to put it on something else.
-
-![V3 hand assembly, isometric view](media/hand_iso.webp)
-
-*CAD render of the `dex_hand` assembly — three fingers in the open position, the spread gear ring
-around the palm, and the spread servo below the mounting plate. The transparent block underneath is
-`base_base`, the stock blank, shown for context only. **Render, not a photo** — no hand is built yet.*
-
-## Why Barrett-style
-
-V1 and V2 give one actuator per joint — simple, but the motor count grows with every joint you add and the palm fills up fast. The Barrett Hand (BH8-280/282) is the canonical answer: **8 joints driven by 4 actuators**, where the gap between the two is closed mechanically rather than electrically. V3 takes that topology:
-
-- **3 independent finger-flexion DOF** — one servo per finger, with each finger **underactuated**: the servo drives the proximal link, and a coupling carries the distal link at a fixed ratio until the proximal link stalls against the object, after which the distal link keeps curling. Adaptive, shape-conforming grasps from one motor per finger.
-- **1 spread (abduction) DOF** — a single servo synchronously rotates **two of the three fingers** about the palm axis, letting the hand reconfigure between pinch, spherical/wrap, and cylindrical grasps.
-
-Accounting: 3 fingers × 2 joints = 6 finger joints, + 2 spread joints (both on one motor) = **8 joints, 4 motors, 4 actuated DOF**.
-
-Reference: Townsend, *"The BarrettHand grasper — programmably flexible part handling and assembly,"* Industrial Robot, 2000 · <https://barrett.com/barretthand>
-
-## CAD Walkthrough
-
-[![CAD walkthrough of the dex_hand SolidWorks assembly](https://cdn.loom.com/sessions/thumbnails/a6dab9213ed04e7084dc8da638d73888-2be32a0337564115.gif)](https://www.loom.com/share/a6dab9213ed04e7084dc8da638d73888)
-
-*A 13-second screen capture of the `dex_hand` SolidWorks assembly, dragging a finger through its
-flexion range to show the proximal + distal link geometry and the spread gear ring in the palm.
-Click the preview to play it on Loom.*
-
-> This is a **CAD capture, not a hardware demo** — no physical hand is assembled yet. A demo of a
-> built hand is still on the roadmap.
-
-## Target Specs
-
-| Spec | Target |
+| Isometric | Front |
 |---|---|
-| **Fingers** | 3 |
-| **Joints / actuated DOF** | 8 joints / 4 DOF |
-| **Finger actuation** | 1 servo per finger, 2-link underactuated (proximal + distal, breakaway coupling) |
-| **Spread DOF** | 1 servo, two fingers mechanically coupled, ~0–180° |
-| **Servos** | DYNAMIXEL X-series (XL330-M288-T class baseline) |
-| **Protocol** | TTL half-duplex daisy chain |
-| **Arm mount** | Printed wrist adapter; reference adapter targets the AgileX Piper tool flange |
-| **Mass budget** | ≤ 600 g incl. servos and fasteners — leaves most of a 1.5 kg arm payload for the object |
-| **Scale** | Fingers ~100 mm; palm under 150 mm across |
-| **Manufacturing** | FDM (PLA / PETG), 256 × 256 mm bed; fasteners, bearings, shafts, springs as standard purchasable parts |
+| <img src="media/hand_iso.png" alt="V3 hand, isometric render" height="320"> | <img src="media/hand_front.png" alt="V3 hand, front render" height="320"> |
 
-*All values are design targets, not measured results — they will be replaced with as-built numbers once a hand is assembled and weighed.*
+*Renders of the assembled CAD. For the built hand in motion, see the
+[bear pick-up video](https://www.loom.com/share/fe40257b80d7402cbd5068077b4870d3). Photos are still to be added.*
 
-## Simulation Stack
+## Specs
 
-V3 is modelled for **MuJoCo** with a **ROS 2 Jazzy + MoveIt 2** integration: URDF/xacro and MJCF of the hand, a combined arm + hand scene, `ros2_control` interfaces over all arm and hand joints, and MoveIt planning groups for the arm, the hand, the spread DOF, and a combined arm+hand group. The underactuated coupling is approximated in sim with coupled joints / equality constraints rather than a modelled clutch.
+| Spec | Value |
+|---|---|
+| **Fingers** | 3 (two on spread turrets + one fixed thumb) |
+| **Motors / DOF** | 4 × DYNAMIXEL XL330-M288-T → 4 actuated DOF: three finger flex + one spread (the second spread finger is geared to it at −1:1) |
+| **Spread** | one servo, two fingers counter-rotate through meshing printed gears |
+| **Bus** | DYNAMIXEL Protocol 2.0, TTL half-duplex, all four servos daisy-chained |
+| **Adapter** | Waveshare Bus Servo Adapter (A), 5 V / 4 A into the barrel jack |
+| **Fingertips** | soft printed fins (`soft_fin_half_mod`) on each finger link |
+| **Arm mount** | printed wrist plate with a Waveshare-adapter pocket, plus a J7 wrist adapter and a camera decoupler / bracket for a wrist camera |
+| **Manufacturing** | FDM, all parts fit a 256 × 256 mm bed; bearings, pins, screws, nuts and heat-set inserts are standard purchasable parts |
 
-**Not in this release** — the models exist in-house but have not been cleared yet. The roadmap below tracks them.
+As-built mass has not been measured yet.
 
-## Hardware Files
+## Assembly guide
+
+**<https://web-6gov.vercel.app/>** — open it on a phone or tablet at the bench.
+
+- **Plan:** tick the parts you have; the planner lists which steps you can do now and which are blocked,
+  and keeps your progress in the browser.
+- **Build:** 23 steps in four stages (Prepare, Palm core, Finger modules, Wrist and close-up). Each step
+  shows its parts, the exact fasteners with counts, numbered actions, a key point and the reason for the
+  order, next to a 3D view of the hand built up to that step. Steps animate: the part aligns, the screws
+  go in from their side, the nuts come on from the other. The first step runs a motion demo of the
+  finished hand.
+- **Parts & screws:** every fastener drawn at 1:1 (print at 100 % and sort the hardware onto it), the
+  fastener table with the reason for each size, the parts list and tools.
+
+The guide is a web app we host; its source is not in this repository.
+
+## Files
 
 ```
 dexterous_hand/v3/
-|-- cad/
-|   |-- dex_hand.SLDASM                      # top-level hand assembly (SolidWorks)
-|   |-- base.SLDPRT                          # palm / mounting plate
-|   |-- base_base.SLDPRT                     # stock blank the palm is cut from
-|   |-- primal_link.SLDPRT                   # proximal link ("primal" as named by the designer)
-|   |-- distal.SLDPRT                        # distal link
-|   |-- Part16_straight^dex_hand.SLDPRT      # finger base / straight link
-|   |-- Part14_onlycoupler^dex_hand.SLDPRT   # underactuation coupler
-|   |-- Part17.SLDPRT                        # small in-assembly part (no STL yet)
-|   |-- spur_gear_m2.00_z30_d6.0_b2.0.step   # spread-drive gear — module 2.0, 30T, 6 mm bore
-|   `-- XL,XC-330.SLDPRT / .SLDASM / .stp    # DYNAMIXEL XL330/XC330 reference model
-|-- stl/
-|   |-- base.STL                             # palm / mounting plate
-|   |-- base_base.STL                        # stock blank — reference only, do NOT print
-|   |-- primal_link.STL                      # proximal link
-|   |-- distal.STL                           # distal link
-|   `-- Part16_straight^dex_hand.STL         # finger base / straight link
-|-- 3mf/                                     # Bambu Studio print project  (TBD)
-`-- media/
-    `-- hand_iso.webp                        # isometric CAD render of the assembly
+|-- stl/      # the 13 printed parts
+`-- media/    # renders
 ```
 
-### Two notes on the file names
+### Parts and counts
 
-- **The `^dex_hand` suffix is load-bearing.** It is SolidWorks' notation for a part saved in the
-  context of the `dex_hand` assembly. Renaming those files outside SolidWorks breaks the
-  references in `dex_hand.SLDASM`, so they are committed exactly as exported — including the `^`,
-  which needs quoting in a shell (`"Part16_straight^dex_hand.STL"`).
-- **`primal_link` means *proximal* link.** Kept as-is so the file name matches the CAD.
+| Part | STL | Qty |
+|---|---|---|
+| Palm box | `base_box.stl` | 1 |
+| Top plate | `plate.stl` | 1 |
+| Spread turret | `f1_turret.stl` | 2 |
+| Spread gear | `f2_gear.stl` | 2 |
+| Bearing seat, F6803ZZ | `f2_bearing_F6803ZZ.stl` | 2 |
+| Idler pin ⌀8 × 40 | `idler_pin_8x40.stl` | 1 |
+| Thumb mount | `thumb_mount.stl` | 1 |
+| Finger link | `thumb_finger_link.stl` | 3 |
+| Soft fin | `soft_fin_half_mod.stl` | 3 |
+| Wrist plate with Waveshare mount | `mount_plate_with_waveshare_mount.stl` | 1 |
+| J7 wrist adapter | `arm_J7_A.stl` | 1 |
+| Camera mount decoupler | `camera_mount_decoupler.stl` | 1 |
+| Camera bracket | `cam_bracket.stl` | 1 |
 
-### What is measured
+**Bought parts:** 4 × DYNAMIXEL XL330-M288-T with horn, Waveshare Bus Servo Adapter (A), 2 × F6803ZZ
+bearings, 2 × ⌀4 × 16 cross pins, M2 / M2.5 / M3 socket-head screws, M2.5 and M3 nuts, 4 × M3
+heat-set inserts. The exact fastener schedule, with counts and lengths per step, is in the assembly guide.
 
-Bounding box, volume, and mesh integrity below are measured from the committed STLs. Everything
-else on this page is design intent inherited from the V3 design notes — the assembly is a binary
-SolidWorks file, so joint count, DOF, and travel ranges have **not** been independently verified
-from the released files.
+### Printing
 
-| Part | Bounding box (mm) | Volume | Triangles | Watertight |
-|---|---|---|---|---|
-| `base` | 10.5 × 150.2 × 136.2 | 94.28 cm³ | 16,318 | yes |
-| `primal_link` | 22.0 × 81.0 × 23.0 | 4.56 cm³ | 16,184 | yes |
-| `distal` | 21.0 × 52.6 × 22.0 | 9.10 cm³ | 16,576 | yes |
-| `Part16_straight^dex_hand` | 31.0 × 24.5 × 64.5 | 2.04 cm³ | 24,308 | yes |
-| `base_base` | 40.0 × 150.2 × 136.2 | 765.97 cm³ | 44 | yes |
-
-The palm at 150.2 mm across, and a proximal + distal link stack of 81 + 52.6 mm, are consistent
-with the "palm under 150 mm, fingers ~100 mm" targets. `base_base` is a plain 44-triangle
-rectangular block — it is the stock the palm is cut from, kept for CAD traceability, and is **not**
-a printable part.
-
-### Third-party CAD
-
-Two files are not ours and keep their upstream provenance:
-
-| File | Source |
-|---|---|
-| `XL,XC-330.*` | ROBOTIS DYNAMIXEL XL330/XC330 reference model (`DC15_A01_DUMMY_ASSY_IDLE_ASM`, Creo export, 2020-07-27) |
-| `spur_gear_m2.00_z30_d6.0_b2.0.step` | Generated with [meta-matic.com](https://meta-matic.com) gear generator 1.2 (Takahashi Mizuki, @tkhsmz) |
-
-## Printing
-
-There is no pre-arranged 3MF plate for V3 yet — load the STLs from `stl/` directly and skip
-`base_base.STL`. Suggested starting point, same as V1/V2:
+There is no pre-arranged 3MF plate yet; load the STLs from `stl/` with the counts above.
 
 | Setting | Value |
 |---|---|
-| Material | PLA or PETG |
+| Material | PLA or PETG (PETG for the finger links and turrets) |
 | Layer height | 0.2 mm |
 | Walls | 4 |
-| Infill | 25–40% (gyroid) |
+| Infill | 25–40% |
 | Supports | Tree, only where needed |
 
-> The finger links carry the grasp load through printed pin joints — PETG is the safer choice for
-> `primal_link`, `distal`, and `Part16_straight`. Print orientation notes will land with the 3MF.
+The soft fins are printed in a flexible filament (TPU); print them separately from the rigid parts.
 
 ## Roadmap
 
-- [x] Release CAD: full hand assembly + per-part source
-- [ ] Export neutral per-part and full-assembly STEP alongside the SolidWorks source
-- [x] Release the first printable STLs
-- [ ] Complete the STL set (coupler, `Part17`, spread gear as printed)
+- [x] Printable STLs
+- [x] Assembly guide (hosted)
+- [x] Demo video: [bear pick-up on the mobile manipulator](https://www.loom.com/share/fe40257b80d7402cbd5068077b4870d3)
+- [ ] Photos of the built hand
 - [ ] Pre-arranged Bambu Studio 3MF plate with print orientations
-- [ ] Renders and assembly photos
-- [ ] Release URDF/xacro + MJCF, with a load-and-sweep script per model
-- [ ] Release the wrist adapter and the combined arm + hand scene
-- [ ] Publish `ros2_control` config and the MoveIt 2 config package
-- [ ] Assembly guide, fastener/bearing BOM, print orientation notes
-- [ ] As-built mass and finger-travel measurements to replace the target table
-- [ ] Demo video
+- [ ] As-built mass
+- [ ] STEP, URDF and bring-up scripts
 
 Questions or interest in V3: [Discord](https://discord.gg/xukJ3nh9wC).
 
