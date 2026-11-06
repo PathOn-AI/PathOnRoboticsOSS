@@ -9,16 +9,16 @@ authors:
     given-names: Gowtham
   - family-names: Chandramouli
     given-names: Nishanth
-  - family-names: Lu
-    given-names: Qiang
-  - family-names: Zhang
-    given-names: Tiger
-  - family-names: Chen
-    given-names: Huanbin
-  - family-names: Wei
-    given-names: Nona
   - family-names: Ni
     given-names: Jingyi
+  - family-names: Zhang
+    given-names: Tiger
+  - family-names: Wei
+    given-names: Nona
+  - family-names: Lu
+    given-names: Qiang
+  - family-names: Chen
+    given-names: Huanbin
 doi: 10.5281/zenodo.23305306
 url: "https://github.com/PathOn-AI/PathOnRoboticsOSS"
 date-released: 2026-10-11
