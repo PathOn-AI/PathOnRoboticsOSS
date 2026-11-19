@@ -72,7 +72,7 @@ permission.
 | What | License |
 |---|---|
 | Everything under [`hardware/`](hardware/) — CAD, meshes, assembly docs, photos | [Standard Digital File License](hardware/LICENSE) |
-| [`software/`](software/), [`website/`](website/), and everything else | [Restricted Use License](LICENSE) |
+| [`software/`](software/) and everything else | [Restricted Use License](LICENSE) |
 
 Licensing for organizations, including schools and universities, is
 available — contact the copyright holder.
