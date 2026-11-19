@@ -29,7 +29,7 @@ Download the free iOS streaming app:
 
 Using the iPhone's LiDAR as a drop-in replacement for a 2D laser scanner. The `/scan` topic produced by `pointcloud_to_laserscan` (started by the ROS2 driver's launch file) feeds a standard 2D SLAM pipeline.
 
-https://www.loom.com/share/903ef7a126844111a8025947679171dd
+▶ [Watch the video](https://www.pathon.ai/opensource/software#iphone-sensor-suite)
 
 *Mapping stage: iPhone-as-2D-LiDAR feeding 2D SLAM.*
 

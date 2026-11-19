@@ -14,7 +14,7 @@ arm joints and one for gripper input.
 
 ## Demo
 
-https://www.loom.com/share/2e685700c64042b793715e626f05dbb4
+▶ [Watch the video](https://www.pathon.ai/opensource/robots/openarm-leader)
 
 *Teleoperating an OpenArm with the PathOn Robotics 3D-printed OpenArm leader arm.*
 

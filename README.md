@@ -33,7 +33,7 @@ robot.
 |---|---|---|
 | **Symmetric Gripper** | Rack-and-pinion parallel-jaw gripper — both fingers move equally, so force is balanced about the tool axis. Mounts to the 6DoF wrist upgrade | [hardware/end_effectors/symmetric_gripper/](hardware/end_effectors/symmetric_gripper/) |
 | **Dexterous Hand** | Compact servo-actuated dexterous hands for prototyping and manipulation research — V1 (DYNAMIXEL XL330) and V2 (Feetech SCS0009), with CAD, STL, and 3MF files | [hardware/end_effectors/dexterous_hand/](hardware/end_effectors/dexterous_hand/) |
-| └ **Dexterous Hand V3** | The hand on our robot: 3 fingers on 4 DYNAMIXEL XL330 servos (one per finger plus a geared spread), soft printed fingertips — printable STLs, a hosted [step-by-step assembly guide](https://web-6gov.vercel.app/), and a [demo video](https://www.loom.com/share/fe40257b80d7402cbd5068077b4870d3) | [hardware/end_effectors/dexterous_hand/v3/](hardware/end_effectors/dexterous_hand/v3/) |
+| └ **Dexterous Hand V3** | The hand on our robot: 3 fingers on 4 DYNAMIXEL XL330 servos (one per finger plus a geared spread), soft printed fingertips — printable STLs, a hosted [step-by-step assembly guide](https://web-6gov.vercel.app/), and a [demo video](https://www.pathon.ai/opensource/robots/dexterous-hand-v3) | [hardware/end_effectors/dexterous_hand/v3/](hardware/end_effectors/dexterous_hand/v3/) |
 
 ### Mounts & Adapters
 

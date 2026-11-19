@@ -20,7 +20,7 @@ See `pathonai_robot_assets/docs/SKILLS_PLAN.md` for the full plan.
 
 Walkthrough of `/attach-end-effector` mounting the Barrett 3-finger hand on PathOn Robotics' SO-101 6DoF arm via MuJoCo's MjSpec API, including the post-processing fixups for the known gotchas.
 
-https://www.loom.com/share/7adfb5e670684cc2b333a63960eddad6
+▶ [Watch the video](https://www.pathon.ai/opensource/software#robot-assets-skills)
 
 *Combining `SO101_6dof_arm` with `barrett_hand` into a single `so101_6dof_arm_barrett_hand` model (10 actuators, 17 bodies).*
 

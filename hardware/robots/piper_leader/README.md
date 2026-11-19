@@ -10,7 +10,7 @@ serial bus servos. Several structural parts are shared with the
 
 ## Demo
 
-https://www.loom.com/share/76692481e2974dc4ab211c4a76d80e24
+▶ [Watch the video](https://www.pathon.ai/opensource/robots/piper-leader)
 
 *Teleoperating a Piper arm with the PathOn Robotics 3D-printed Piper leader arm.*
 

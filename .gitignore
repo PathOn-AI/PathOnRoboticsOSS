@@ -8,7 +8,7 @@ venv
 .venv
 .ipynb_checkpoints
 
-# Video stays off git — host it on Loom and link from the README.
+# Video stays off git — it plays on the pathon.ai/opensource pages; link to the page from the README.
 *.mp4
 *.mov
 *.webm

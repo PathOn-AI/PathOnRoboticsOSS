@@ -8,7 +8,7 @@ A 3-finger, servo-actuated dexterous hand designed for fast prototyping and mani
 
 ## Demo
 
-https://www.loom.com/share/230f5db9a7ae4e8f90ad7e18fb1e4fa1
+▶ [Watch the video](https://www.pathon.ai/opensource/robots/dexterous-hand-v1)
 
 *PathOn Dexterous Hand V1 demo.*
 

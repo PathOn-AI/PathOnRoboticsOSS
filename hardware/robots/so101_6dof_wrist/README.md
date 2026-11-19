@@ -41,7 +41,7 @@ The demos below exercise the complete assembly -- 6DoF wrist plus symmetric grip
 
 We implement a vision-language grasping pipeline using SAM3 for segmentation and grasp generation models. Given a natural language command (e.g., "pick up the banana"), the system segments the target object and plans a grasp.
 
-https://www.loom.com/share/2fed8ad63ee7416fad60bd227efd1a95
+▶ [Watch the video](https://www.pathon.ai/opensource/robots/so101-symmetric-gripper)
 
 *Simulated pick-and-place with vision-language grasping.*
 
@@ -49,7 +49,7 @@ https://www.loom.com/share/2fed8ad63ee7416fad60bd227efd1a95
 
 The real robot is integrated with ROS2 MoveIt for motion planning, with point cloud overlay for scene understanding.
 
-https://www.loom.com/share/303cc35079a64f459af959ff9830bfd2
+▶ [Watch the video](https://www.pathon.ai/opensource/robots/so101-6dof-arm)
 
 *MoveIt motion planning with point cloud overlay on the physical SO-101 6DoF arm.*
 
@@ -57,7 +57,7 @@ https://www.loom.com/share/303cc35079a64f459af959ff9830bfd2
 
 Vision-language grasping running on the physical SO-101 6DoF arm.
 
-https://www.loom.com/share/fe4379299d904ffc811d0ab0f7dc357c
+▶ [Watch the video](https://www.pathon.ai/opensource/robots/so101-symmetric-gripper)
 
 *Real-robot pick-and-place with vision-language grasping.*
 

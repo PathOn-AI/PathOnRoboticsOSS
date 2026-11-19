@@ -4,11 +4,11 @@ Offline 3D scanning app for iPhone. Capture depth, RGB, camera pose, and confide
 
 ## Demo
 
-https://www.loom.com/share/b4a0ab5e65ce4debafca076c697b67ae
+▶ [Watch the video](https://www.pathon.ai/opensource/software#iphone-sensor-suite)
 
 *Visualization of the fused point cloud in marker frame.*
 
-https://www.loom.com/share/dc6d9b6e6215488fb55b152fd6bb4fec
+▶ [Watch the video](https://www.pathon.ai/opensource/software#iphone-sensor-suite)
 
 *3D Gaussian Splatting reconstruction from a Scanner3D capture, viewed in the web viewer.*
 

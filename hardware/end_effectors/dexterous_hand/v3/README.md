@@ -6,8 +6,8 @@
 >
 > **Released here:** the printable STLs for every part and CAD renders.
 > **Assembly guide:** interactive, step by step, at **<https://web-6gov.vercel.app/>**.
-> **Demo video:** [the hand picking up a plush bear on our mobile manipulator](https://www.loom.com/share/fe40257b80d7402cbd5068077b4870d3)
-> (Loom, recorded 2026-10-19).
+> **Demo video:** [the hand picking up a plush bear on our mobile manipulator](https://www.pathon.ai/opensource/robots/dexterous-hand-v3)
+> (recorded 2026-10-19).
 
 A compact 3-finger hand on **four DYNAMIXEL XL330-M288-T** servos: one servo per finger for flexion,
 plus one spread servo that rotates two of the fingers about the palm through a pair of meshing gears.
@@ -20,7 +20,7 @@ sit on turrets that ride on F6803ZZ bearings around an idler pin.
 | <img src="media/hand_iso.png" alt="V3 hand, isometric render" height="320"> | <img src="media/hand_front.png" alt="V3 hand, front render" height="320"> |
 
 *Renders of the assembled CAD. For the built hand in motion, see the
-[bear pick-up video](https://www.loom.com/share/fe40257b80d7402cbd5068077b4870d3). Photos are still to be added.*
+[bear pick-up video](https://www.pathon.ai/opensource/robots/dexterous-hand-v3). Photos are still to be added.*
 
 ## Specs
 
@@ -101,7 +101,7 @@ The soft fins are printed in a flexible filament (TPU); print them separately fr
 
 - [x] Printable STLs
 - [x] Assembly guide (hosted)
-- [x] Demo video: [bear pick-up on the mobile manipulator](https://www.loom.com/share/fe40257b80d7402cbd5068077b4870d3)
+- [x] Demo video: [bear pick-up on the mobile manipulator](https://www.pathon.ai/opensource/robots/dexterous-hand-v3)
 - [ ] Photos of the built hand
 - [ ] Pre-arranged Bambu Studio 3MF plate with print orientations
 - [ ] As-built mass
